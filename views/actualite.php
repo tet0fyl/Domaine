@@ -1,0 +1,1 @@
+<h2>C'est la page d'actu</h2>

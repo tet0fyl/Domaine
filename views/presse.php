@@ -1,0 +1,1 @@
+<h2>C'est la page de presse</h2>
