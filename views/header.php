@@ -13,7 +13,7 @@
 			</div>
 			<nav>
 				<ul>
-					<li <?php echo (isset($page) && $page=='home')?"class='active'":""; ?> ><a href="index.php?controller=evenement&action=home" title="Page d'accueil">Accueil</a></li>
+					<li <?php echo (isset($page) && $page=='home')?"class='active'":""; ?> ><a href="index.php?controller=evenement_actualite&action=home" title="Page d'accueil">Accueil</a></li>
 					<li <?php echo (isset($page) && $page=='evenement')?"class='active'":""; ?> ><a href="index.php?controller=evenement&action=evenement" title="Evenements">Evenements</a></li>
 					<li <?php echo (isset($page) && $page=='actualite')?"class='active'":""; ?> ><a href="index.php?controller=actualite&action=actualite" title="Actualités">Actualités</a></li>
 					<li <?php echo (isset($page) && $page=='presse')?"class='active'":""; ?> ><a href="index.php?controller=presse&action=presse" title="Presse">Presse</a></li>

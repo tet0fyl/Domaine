@@ -4,14 +4,49 @@
 	include("controllers/controller.php");
 	include("models/manager_class.php");
 
-	$strCtrl 	= (isset($_GET['controller']))?$_GET['controller']:"evenement";
+	if (isset($_GET['controller'])){
+			$strCtrl = $_GET['controller'];
+	}else{
+		$strCtrl = "evenement_actualite";
+	}
+
 	$strAction 	= (isset($_GET['action']))?$_GET['action']:"home";	
+
+	// Si il y a deux controllers
+	if(strpos($strCtrl,"_")==true){
+		$strCtrl = explode("_",$_GET['controller'])[0];
+		$strCtrl2 = explode("_",$_GET['controller'])[1];
+
+		include("controllers/".$strCtrl2."_controller.php");
+
+		$classeName2=$strCtrl2."_ctrl";
+		$objController2 = new $classeName2;
+
+		
+		include("controllers/".$strCtrl."_controller.php");
 	
-	include("controllers/".$strCtrl."_controller.php");
+		$classeName = $strCtrl."_ctrl";
 	
-	$classeName = $strCtrl."_ctrl";
+		$objController = new $classeName;
+		
+		$parentController = new Controller;
+
+		$parentController->display2Ctrl($objController,$objController2,$strAction);
+
+
 	
-	$objController = new $classeName;
+
+	}else{
+		
+		include("controllers/".$strCtrl."_controller.php");
 	
-	$objController->$strAction();
+		$classeName = $strCtrl."_ctrl";
+	
+		$objController = new $classeName;
+	
+
+		$objController->$strAction();
+	
+
+	}
 	

@@ -8,14 +8,11 @@
 			parent::__construct();
 		}
 
-		public function home(){
-			$data['page']	= 'home';
+		public function home(&$data){
 			$objActualiteManager	= new actualiteManager;
-			$arrActualite 		= $objArticleManager->getList(5);
+			$arrActualite 		= $objActualiteManager->getList(5);
+			$data["arrActualite"]= $arrActualite;
 			
-			$data["arrActualite"]= $arrArticles;
-			$this->_contenu = "home.php";
-			$this->display($data);			
 		}
 		
 		public function actualite(){

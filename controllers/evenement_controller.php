@@ -8,14 +8,10 @@
 			parent::__construct();
 		}
 
-		public function home(){
-			$data['page']	= 'home';
+		public function home(&$data){
 			$objEvenementManager	= new evenementManager;
-			$arrEvenement		= $objEvenementManager->getList();
-			
+			$arrEvenement		= $objEvenementManager->getList();			
 			$data["arrEvenement"]= $arrEvenement;
-			$this->_contenu = "home.php";
-			$this->display($data);			
 		}
 		
 		public function evenement(){

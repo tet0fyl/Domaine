@@ -19,6 +19,22 @@
 			include("views/footer.php");
 		}
 	
+		public function display2Ctrl($Strctrl1, $Strctrl2,$StrAction) {
+			// Le tableau des variables ($data) est parcouru
+			
+
+			$data['page']	= $StrAction;		
+			
+			$this->_contenu = $StrAction.".php";
+			
+			$Strctrl1->$StrAction($data);
+			$Strctrl2->$StrAction($data);
+
+			print_r($data);
+			include("views/header.php");
+			include("views/".$this->_contenu);
+			include("views/footer.php");
+		}
 		
 		
 	}
