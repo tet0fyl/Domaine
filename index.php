@@ -9,14 +9,14 @@
 	}else{
 		$strCtrl = "evenement_actualite";
 	}
-
+	
 	$strAction 	= (isset($_GET['action']))?$_GET['action']:"home";	
 
 	// Si il y a deux controllers
 	if(strpos($strCtrl,"_")==true){
-		$strCtrl = explode("_",$_GET['controller'])[0];
-		$strCtrl2 = explode("_",$_GET['controller'])[1];
-
+		$strCtrlTmp = $strCtrl;
+		$strCtrl = explode("_",$strCtrlTmp)[0];
+		$strCtrl2 = explode("_",$strCtrlTmp)[1];
 		include("controllers/".$strCtrl2."_controller.php");
 
 		$classeName2=$strCtrl2."_ctrl";
