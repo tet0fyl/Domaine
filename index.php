@@ -32,8 +32,6 @@
 		$parentController = new Controller;
 
 		$parentController->display2Ctrl($objController,$objController2,$strAction);
-
-
 	
 
 	}else{

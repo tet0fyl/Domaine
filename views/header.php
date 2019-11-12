@@ -1,3 +1,4 @@
+<?php include("tools/path.php")	?>
 <!DOCTYPE html>
 <html lang='fr'>
 	<head>
