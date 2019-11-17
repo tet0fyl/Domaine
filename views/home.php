@@ -1,20 +1,19 @@
 <h2>C'est la page d'acceuil</h2>
 
-<?php 
-
-	// Boucler autant de fois que le tableau contient d'éléments => foreach
-	foreach($data["arrEvenement"] as $arrDetailEvenement){
+<h3>EVENT :</h3>
+<?php
+	foreach($data["arrEvenement"] as $dataEvent){
 		$objEvenement = new Evenement;
-		$objEvenement->hydrate($arrDetailEvenement);
+		$objEvenement->hydrate($dataEvent);
 		include("views/objects/evenement_object.php");					
 	}	
 ?>
 
-<?php 
-	// Boucler autant de fois que le tableau contient d'éléments => foreach
-	foreach($data["arrActualite"] as $arrDetailEvenement){
+<h3>ACTU :</h3>
+<?php
+	foreach($data["arrActualite"] as $dataActu){
 		$objActualite = new Actualite;
-		$objActualite->hydrate($arrDetailEvenement);
+		$objActualite->hydrate($dataActu);
 		include("views/objects/actualite_object.php");					
 	}	
 ?>

@@ -11,7 +11,7 @@
 		public function presse(){
 			$data['page']	= 'presse';
 			$objPresseManager	= new presseManager;
-			$arrPresse		= $objPresseManager->getList(5);
+			$arrPresse		= $objPresseManager->getList();
 			
 			$data["arrPresse"]= $arrPresse;
 			$this->_contenu = "presse.php";

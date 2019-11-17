@@ -12,7 +12,6 @@
 			$objActualiteManager	= new actualiteManager;
 			$arrActualite 		= $objActualiteManager->getList(5);
 			$data["arrActualite"]= $arrActualite;
-			
 		}
 		
 		public function actualite(){

@@ -50,11 +50,27 @@
 				"id" => "1",
 				"title" => "BLIBLOUUUBEFSSDF",
 				"img" => "20191114.jpg",
-				"date" => "21/324/20191123",
+				"date" => "14/11/2019",
 				"content" => "Six Six et Le Domaine blibbwedewferdwtr :
 				
 				Parking gratuit à proximité, animaux, nourriture et boissons extérieurs ne sont pas tolérés."
-			]];
+			],"3" => [
+                "id" => "1",
+                "title" => "Lorem BidulTruc",
+                "img" => "20191121.jpg",
+                "date" => "21/11/2019",
+                "content" => "Six Six et Le Domaine blibbwedewferdwtr :
+				
+				Parking gratuit à proximité, animaux, nourriture et boissons extérieurs ne sont pas tolérés."
+            ],"4" => [
+                "id" => "1",
+                "title" => "Lorem BidulTruc2",
+                "img" => "20191207.jpg",
+                "date" => "07/12/2019",
+                "content" => "Six Six et Le Domaine blibbwedewferdwtr :
+				
+				Parking gratuit à proximité, animaux, nourriture et boissons extérieurs ne sont pas tolérés."
+            ]];
 		}
 		
 		public function get($intId){

@@ -14,7 +14,7 @@
 				$$key = $value;
 			}
 
-			include("views/header.php");
+            include("views/header.php");
 			include("views/".$this->_contenu);
 			include("views/footer.php");
 		}
@@ -28,7 +28,7 @@
 			$Strctrl1->$StrAction($data);
 			$Strctrl2->$StrAction($data);
 
-			include("views/header.php");
+            include("views/header.php");
 			include("views/".$this->_contenu);
 			include("views/footer.php");
 		}
