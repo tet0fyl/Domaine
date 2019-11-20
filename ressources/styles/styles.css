@@ -1,0 +1,13 @@
+nav ul li a{
+    display: block;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+nav ul li {
+    display: inline-block;
+    padding-right: 30px;
+}
+nav{
+    margin-left: 150px;
+}
