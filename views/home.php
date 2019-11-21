@@ -5,7 +5,7 @@
 	foreach($data["arrEvenement"] as $dataEvent){
 		$objEvenement = new Evenement;
 		$objEvenement->hydrate($dataEvent);
-		include("views/objects/evenement_object.php");					
+		include("views/objects/home/evenement_object.php");
 	}	
 ?>
 
@@ -14,6 +14,6 @@
 	foreach($data["arrActualite"] as $dataActu){
 		$objActualite = new Actualite;
 		$objActualite->hydrate($dataActu);
-		include("views/objects/actualite_object.php");					
+		include("views/objects/home/actualite_object.php");
 	}	
 ?>
