@@ -18,7 +18,8 @@
 					<li <?php echo (isset($page) && $page=='evenement')?"class='active'":""; ?> ><a href="index.php?controller=evenement&action=evenement" title="Evenements">Evenements</a></li>
 					<li <?php echo (isset($page) && $page=='actualite')?"class='active'":""; ?> ><a href="index.php?controller=actualite&action=actualite" title="Actualités">Actualités</a></li>
 					<li <?php echo (isset($page) && $page=='presse')?"class='active'":""; ?> ><a href="index.php?controller=presse&action=presse" title="Presse">Presse</a></li>
-					<li <?php echo (isset($page) && $page=='contact')?"class='active'":""; ?> ><a href="index.php?controller=pages&action=contact" title="Contact">Contact</a></li>
+                    <li <?php echo (isset($page) && $page=='media')?"class='active'":""; ?> ><a href="index.php?controller=media&action=media" title="Presse">Media</a></li>
+                    <li <?php echo (isset($page) && $page=='contact')?"class='active'":""; ?> ><a href="index.php?controller=pages&action=contact" title="Contact">Contact</a></li>
 				</ul>
 			</nav>
 		</header>
