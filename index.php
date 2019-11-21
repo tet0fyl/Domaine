@@ -26,23 +26,16 @@
 		include("controllers/".$strCtrl."_controller.php");
 	
 		$classeName = $strCtrl."_ctrl";
-	
 		$objController = new $classeName;
-		
 		$parentController = new Controller;
-
 		$parentController->display2Ctrl($objController,$objController2,$strAction);
-	
 
+        // Sinon il y a un seul controllers
 	}else{
 		
 		include("controllers/".$strCtrl."_controller.php");
-	
 		$classeName = $strCtrl."_ctrl";
-	
 		$objController = new $classeName;
-	
-
 		$objController->$strAction();
 	
 

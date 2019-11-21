@@ -9,7 +9,8 @@
 		}
 
 		public function home(&$data){
-			$objActualiteManager	= new actualiteManager;
+            $data['page']	= 'home';
+            $objActualiteManager	= new actualiteManager;
 			$arrActualite 		= $objActualiteManager->getList(5);
 			$data["arrActualite"]= $arrActualite;
 		}

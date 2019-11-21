@@ -27,6 +27,11 @@
 			
 			$Strctrl1->$StrAction($data);
 			$Strctrl2->$StrAction($data);
+            // Le tableau des variables ($data) est parcouru
+            foreach($data as $key=>$value){
+                // Pour chaque élément du tableau, on recréé la variable avec son contenu
+                $$key = $value;
+            }
 
             include("views/header.php");
 			include("views/".$this->_contenu);

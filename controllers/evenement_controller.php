@@ -9,7 +9,8 @@
 		}
 
 		public function home(&$data){
-			$objEvenementManager	= new evenementManager;
+            $data['page']	= 'home';
+            $objEvenementManager	= new evenementManager;
 			$arrEvenement		= $objEvenementManager->getList();			
 			$data["arrEvenement"]= $arrEvenement;
 		}

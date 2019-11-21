@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
         <title><?php echo ucfirst($page) ?></title>
 		<link rel="stylesheet" href="ressources/styles/styles.css">
-		<link rel="icon" type="image/png" href="asset/images/logo/logo.png" />	
+		<link rel="icon" type="image/png" href="ressources/images/logo/logo.png" />
     </head>
 	<body>
 		<header >
