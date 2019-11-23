@@ -19,7 +19,7 @@
 
 
         /** SETTERS **/
-        public function setId($data){
+        public function setId_media($data){
             $this->_id = $data;
         }
 

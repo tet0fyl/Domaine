@@ -7,7 +7,9 @@
 		private $_img;
 		private $_date;
 		private $_content;
-		
+		private $_prix;
+        private $_cancel;
+
 		public function __construct(){
 		}
 		
@@ -21,25 +23,37 @@
 		}
 
 		/** SETTERS **/
-		public function setId($data){
+		public function setId_evenement($data){
 			$this->_id = $data;
 		}
 
-		public function setTitle($data){
+		public function setTitre_evenement($data){
 			$this->_title = $data;
 		}
 
-		public function setImg($data){
+		public function setAffiche_evenement($data){
 			$this->_img = $data;
 		}
 
-		public function setDate($data){
+		public function setDate_heure_evenement($data){
 			$this->_date = $data;
 		}
 
-		public function setContent($data){
+		public function setContenu_evenement($data){
 			$this->_content = $data;
 		}
+
+        public function setPrix_evenement($data){
+            $this->_prix = $data;
+        }
+
+        public function setCancel_evenement($data){
+		    if($data==0){
+                $this->_cancel = true;
+            }else{
+                $this->_cancel = false;
+            }
+        }
 		
 		/** GETTERS **/
 		public function getTitle(){

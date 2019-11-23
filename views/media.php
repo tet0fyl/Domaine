@@ -4,6 +4,6 @@
 	foreach($data["arrMedia"] as $dataMedia){
 		$objMedia = new Media;
 		$objMedia->hydrate($dataMedia);
-		include("views/objects/media_object.php");
+		include("views/objects/own_page/media_object.php");
 	}	
 ?>

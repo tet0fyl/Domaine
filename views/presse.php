@@ -5,6 +5,6 @@
 foreach($data["arrPresse"] as $data){
     $objPresse = new Presse;
     $objPresse->hydrate($data);
-    include("views/objects/presse_object.php");
+    include("views/objects/own_page//presse_object.php");
 }
 ?>

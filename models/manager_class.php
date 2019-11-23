@@ -6,7 +6,7 @@
 		public function __construct(){
 			try{
 				// Connexion à la base de données
-				$this->_db = new PDO("mysql:host=localhost;dbname=blog", "root", ""); 
+				$this->_db = new PDO("mysql:host=localhost;dbname=domaine", "root", "");
 
 				// Configuration des exceptions
 				$this->_db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

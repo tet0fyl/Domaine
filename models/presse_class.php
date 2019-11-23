@@ -20,15 +20,15 @@
 
 
         /** SETTERS **/
-        public function setId($data){
+        public function setId_presse($data){
             $this->_id = $data;
         }
 
-        public function setFichier($data){
+        public function setNom_fichier_presse($data){
             $this->_fichier = $data;
         }
 
-        public function setDate($data){
+        public function setDate_presse($data){
             $this->_date = $data;
         }
 

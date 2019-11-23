@@ -4,6 +4,6 @@
 foreach($data["arrActualite"] as $data){
     $objActualite = new Actualite;
     $objActualite->hydrate($data);
-    include("views/objects/actualite_object.php");
+    include("views/objects/own_page/actualite_object.php");
 }
 ?>

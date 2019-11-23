@@ -21,23 +21,23 @@
 		}
 
 		/** SETTERS **/
-		public function setId($data){
+		public function setId_actualite($data){
 			$this->_id = $data;
 		}
 
-		public function setTitle($data){
+		public function setTitre_actualite($data){
 			$this->_title = $data;
 		}
 
-		public function setImg($data){
+		public function setAffiche_actualite($data){
 			$this->_img = $data;
 		}
 
-		public function setDate($data){
+		public function setDate_actualite($data){
 			$this->_date = $data;
 		}
 
-		public function setContent($data){
+		public function setContenu_actualite($data){
 			$this->_content = $data;
 		}
 		
