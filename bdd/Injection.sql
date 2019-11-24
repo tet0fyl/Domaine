@@ -9,56 +9,156 @@
 
 
 INSERT INTO Evenements (titre_evenement,date_heure_evenement,contenu_evenement,prix_evenement,cancel_evenement,affiche_evenement) VALUES
-        ('Marbre / Fight the Ninja / Oceya','2019-12-07 19:00:00',"Samedi 7 Décembre 2019 au Domaine - 27 avenue Foch à Altkirch.
+        ('Marbre / Fight the Ninja / Oceya','2019-12-07 19:00:00',"Six Six et Le Domaine présentent :
 
-                                                                Ouverture des portes et Happy Hour : 19h00
-                                                                Début des concerts : 20h00
-                                                                Fin des concerts : 00h00
-                                                                Fermeture du Domaine : 00h30
-                                                                L'événement est réservé aux membres de l'association Six Six.
-                                                                MEMBRE ANNUEL : 3€.
-                                                                Parking gratuit à proximité, animaux, nourriture et boissons extérieurs ne sont pas tolérés",
+—
+• Marbre (Dark-Electro, Toulon)
+https://youtu.be/wVAs161r0Bg
+(❤ F Buttons, Ben Frost)
+
+• FIGHT the NINJA (Future Bass, Colmar)
+https://youtu.be/an-HqpJfuMM
+(❤ Flume, DROELOE)
+
+• Oceya (Glitch-Hop, Altkirch)
+https://youtu.be/oF6Z_le6cIg
+(❤ SHIGETO, Lorn)
+—
+Samedi 7 Décembre 2019 au Domaine - 27 avenue Foch à Altkirch.
+
+Ouverture des portes et Happy Hour : 19h00
+Début des concerts : 20h00
+Fin des concerts : 00h00
+Fermeture du Domaine : 00h30
+
+—
+P.A.F. : 6€ (adhésion journalière incluse).
+MEMBRE ANNUEL : 3€.
+(Possibilité d''adhésion annuelle à Six Six sur place, 10€ pour toute l''année, entrée du soir offerte).
+
+—
+L''événement est réservé aux membres de l''association Six Six.
+
+Parking gratuit à proximité, animaux, nourriture et boissons extérieurs ne sont pas tolérés",
                                                                 '6','0','20191207.jpg'),
-        ('The Sheldons / The Lucky Skankers / King Zion Sound', '2019-12-21 19:00:00',"Samedi 21 Décembre 2019 au Domaine - 27 avenue Foch à Altkirch.
+        ('The Sheldons / The Lucky Skankers / King Zion Sound', '2019-12-21 19:00:00',"Six Six et Le Domaine présentent :
 
-                                                                Ouverture des portes et Happy Hour : 19h00
-                                                                Début des concerts : 20h00
-                                                                Fin des concerts : 00h00
-                                                                Fermeture du Domaine : 00h30
-                                                                L'événement est réservé aux membres de l'association Six Six.
-                                                                MEMBRE ANNUEL : 3€.
-                                                                Parking gratuit à proximité, animaux, nourriture et boissons extérieurs ne sont pas tolérés",
+Release Party de The Sheldons
+—
+• The Sheldons (Ska-Punk, Altkirch)
+https://youtu.be/QKrkDTr1ti8
+(❤ Ska-p official, The Interrupters)
+
+• @The Lucky Skankers (Ska Instrumental, Altkirch)
+(❤)
+
+• KING ZION SOUND (Mulhouse)
+https://youtu.be/f_ZtePux708
+(❤)
+
+—
+Samedi 21 Décembre 2019 au Domaine - 27 avenue Foch à Altkirch.
+
+Ouverture des portes et Happy Hour : 19h00
+Début des concerts : 20h00
+Fin des concerts : 00h00
+Fermeture du Domaine : 00h30
+
+—
+P.A.F. : 6€ (adhésion journalière incluse).
+MEMBRE ANNUEL : 3€.
+(Possibilité d''adhésion annuelle à Six Six sur place, 10€ pour toute l''année, entrée du soir offerte).
+
+—
+L''événement est réservé aux membres de l''association Six Six.
+
+Parking gratuit à proximité, animaux, nourriture et boissons extérieurs ne sont pas tolérés",
                                                                 '6','0','20191221.jpg'),
-        ('Aperolectro - Meets The Domaine SPECIAL AFTER DE LA SAINTE-CATHERINE','2019-11-21 18:00:00',"Jeudi 21 Novembre 2019 au Domaine - 27 av. Foch à Altkirch.
+        ('Aperolectro - Meets The Domaine SPECIAL AFTER DE LA SAINTE-CATHERINE','2019-11-21 18:00:00',"Aperolectro, le Domaine et Six Six présentent :
 
-                                                                Fin de la foire et Ouverture du Domaine : 18H00
-                                                                Début des sets : 18H30
-                                                                Fin des sets : 01H30
-                                                                Fermeture du Domaine : 02H00
-                                                                L'événement est réservé aux membres de l'association Six Six.
-                                                                MEMBRE ANNUEL : 3€.
-                                                                Parking gratuit à proximité, animaux, nourriture et boissons extérieurs ne sont pas tolérés",
+• Azzuro (ApErOlEcTrO / Sea You Festival / Jardin Magique)
+https://soundcloud.com/azzuro
+
+• Nico Mariani (ApErOlEcTrO / Cesarhof Festival)
+https://www.mixcloud.com/dj_nico_schweiz/
+
+• Stavisky (Seventh Sense, Borderline)
+https://soundcloud.com/stavisky_alex
+
+—
+Jeudi 21 Novembre 2019 au Domaine - 27 av. Foch à Altkirch.
+
+Fin de la foire et Ouverture du Domaine : 18H00
+Début des sets : 18H30
+Fin des sets : 01H30
+Fermeture du Domaine : 02H00
+
+—
+P.A.F. : 6€ (adhésion journalière incluse).
+MEMBRE ANNUEL : 3€.
+(Possibilité d''adhésion annuelle à Six Six sur place, 10€ pour toute l''année, entrée du soir offerte).
+
+—
+L''événement est réservé aux membres de l''association Six Six.
+
+Parking gratuit à proximité, animaux, nourriture et boissons extérieurs ne sont pas tolérés.",
                                                                 '6','0','20191121.jpg'),
-        ('Essayages 1 : Mojo Sapiens / Oceya / DJ Batflec','2019-11-07 19:00:00',"Jeudi 07 Novembre 2019 au Domaine - 27 av. Foch à Altkirch.
+        ('Essayages 1 : Mojo Sapiens / Oceya / DJ Batflec','2019-11-07 19:00:00',"Six Six et Le Domaine présentent :
 
-                                                                Ouverture des portes et Happy Hour : 19h00
-                                                                Début des concerts : 20h00
-                                                                Fin des concerts : 00h00
-                                                                Fermeture du Domaine : 00h30
-                                                                L'événement est réservé aux membres de l'association Six Six.
-                                                                MEMBRE ANNUEL : 3€.
-                                                                Parking gratuit à proximité, animaux, nourriture et boissons extérieurs ne sont pas tolérés",
+Essayages vol. 1 :
+Concerts d''essai ultra-intimiste, sur inscription uniquement (limité à 33 entrées).
+
+• Mojo Sapiens (Hip-Hop/Funk/Blues, Strasbourg)
+Premier essai live, projet avec des membres d''Art District, Leopard DaVinci et Dirty Deep.
+
+• Oceya (Glitch-Hop, Altkirch)
+Premier set live, ultime test avant Marbre / Fight the Ninja / Oceya.
+
+• DJ Batflec ($P Records, Altkirch)
+
+—
+Jeudi 07 Novembre 2019 au Domaine - 27 avenue Foch à Altkirch.
+
+Ouverture des portes et Happy Hour : 19h00
+Début des concerts : 20h00
+Fin des concerts : 23h30
+Fermeture du Domaine : 00h30
+
+—
+GRATUIT, RÉSERVÉ AUX MEMBRES ANNUEL
+(Possibilité d''adhésion annuelle à Six Six au préalable, 10€ pour toute l''année).
+
+—
+L''événement est réservé aux membres de l''association Six Six.
+
+Parking gratuit à proximité, animaux, nourriture et boissons extérieurs ne sont pas tolérés.",
                                                                 '6','0','20191107.jpg'),
-        ('Aperolectro Meets le Domaine Special Halloween','2019-10-31 19:00:00',"Jeudi 31 Octobre 2019 au Domaine - 27 av. Foch à Altkirch.
+        ('Aperolectro Meets le Domaine Special Halloween','2019-10-31 19:00:00',"Aperolectro, le Domaine et Six Six présentent :
 
-                                                                Ouverture du Domaine et Début des sets : 19H00
-                                                                Fin des sets : 01H00
-                                                                Fermeture du Domaine : 01H30
-                                                                ** P.A.F. : offerte aux gens déguisés**
-                                                                P.A.F. : 3€ adhésion journalière incluse.
-                                                                L'événement est réservé aux membres de l'association Six Six.
-                                                                MEMBRE ANNUEL : 3€.
-                                                                Parking gratuit à proximité, animaux, nourriture et boissons extérieurs ne sont pas tolérés",
+• Azzuro (ApErOlEcTrO / Sea You Festival )
+https://soundcloud.com/azzuro
+
+• Nico Mariani (ApErOlEcTrO / Jardin Magique)
+https://www.mixcloud.com/dj_nico_schweiz/
+
+
+—
+Jeudi 31 Octobre 2019 au Domaine - 27 av. Foch à Altkirch.
+
+Ouverture du Domaine et Début des sets : 19H00
+Fin des sets : 01H00
+Fermeture du Domaine : 01H30
+
+—
+🎃** P.A.F. : offerte aux gens déguisés**👻
+P.A.F. : 3€ (adhésion journalière incluse).
+MEMBRE ANNUEL : Participation libre
+(Possibilité d''adhésion annuelle à Six Six sur place, 10€ pour toute l''année, entrée du soir offerte).
+
+—
+L''événement est réservé aux membres de l''association Six Six.
+
+Parking gratuit à proximité, animaux, nourriture et boissons extérieurs ne sont pas tolérés.",
                                                                 '3','0','20191031.jpg');
 
 
