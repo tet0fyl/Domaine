@@ -14,10 +14,10 @@
 		}
 		
 		public function get($intId){
-			//$strQuery =
-			//$query 		= $this->_db->query($strQuery);
-			//$arrResult 	= $query->fetch();
-			//return $arrResult;
-		}		
+		    $strQuery = "SELECT * FROM Evenements WHERE id_evenement LIKE $intId";
+		    $query = $this->_db->query($strQuery);
+		    $arrResult = $query->fetch();
+            return $arrResult;
+		}
 	}
 	

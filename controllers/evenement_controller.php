@@ -26,5 +26,16 @@
 			$this->display($data);
 
 		}
+
+        public function single(){
+            $data['page']	= 'evenement';
+            $objEvenementManager	= new evenementManager;
+            $arrEvenement 		= $objEvenementManager->get($_GET['id']);
+            $objEvenement = new Evenement;
+            $objEvenement->hydrate($arrEvenement);
+            $data["objEvenement"]= $objEvenement;
+            $this->_contenu = "objects/single/evenement_object.php";
+            $this->display($data);
+        }
 		
 	}

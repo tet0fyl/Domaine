@@ -3,7 +3,7 @@
 		 width="500" src="<?php echo $urlAfficheActu . $objActualite->getImg(); ?>">
 	<div>
 		<h3><?php echo $objActualite->getTitle(); ?></h3>
-		<p><?php echo $objActualite->getDate() ?></p>
+		<p><?php echo $objActualite->getFrenchDate() ?></p>
 		<p class="content"><?php echo $objActualite->getContent(); ?></p>
 	</div>
 </article>

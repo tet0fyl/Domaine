@@ -26,5 +26,16 @@
 			$this->display($data);
 
 		}
+
+        public function single(){
+            $data['page']	= 'actualite';
+            $objActualiteManager	= new actualiteManager;
+            $arrActualite 		= $objActualiteManager->get($_GET['id']);
+            $objActualite = new Actualite;
+            $objActualite->hydrate($arrActualite);
+            $data["objActualite"]= $objActualite;
+            $this->_contenu = "objects/single/actualite_object.php";
+            $this->display($data);
+        }
 		
 	}

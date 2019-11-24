@@ -2,9 +2,9 @@
 
 
 <?php
-foreach($data["arrPresse"] as $data){
-    $objPresse = new Presse;
-    $objPresse->hydrate($data);
-    include("views/objects/own_page//presse_object.php");
-}
+    foreach($data["arrPresse"] as $data){
+        $objPresse = new Presse;
+        $objPresse->hydrate($data);
+        include("views/objects/own_page//presse_object.php");
+    }
 ?>

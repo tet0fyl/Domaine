@@ -11,14 +11,13 @@
             $query = $this->_db->query($strQuery);
             $arrResult = $query->fetchAll();
             return $arrResult;
-
         }
 
 		public function get($intId){
-			//$strQuery =
-			//$query 		= $this->_db->query($strQuery);
-			//$arrResult 	= $query->fetchAll();
-			//return $arrResult;
+            $strQuery = "SELECT * FROM Actualites WHERE id_actualite = $intId";
+            $query = $this->_db->query($strQuery);
+            $arrResult = $query->fetch();
+            return $arrResult;
 		}		
 	}
 	
