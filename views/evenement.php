@@ -1,5 +1,19 @@
 <h2>C'est la page de event</h2>
 
+
+<?php
+    foreach($data["arrGenre"] as $arrDetailGenre){
+        $objGenre = new Genre;
+        $objGenre->hydrate($arrDetailGenre);
+        if(isset($genre) && $genre == $objGenre->getLibelle()){
+            $objGenre->setSelected(true);
+        }
+        include("views/objects/own_page/genre_object.php");
+    }
+
+?>
+
+
 <?php 
 	foreach($data["arrEvenement"] as $arrDetailEvenement){
 		$objEvenement = new Evenement;

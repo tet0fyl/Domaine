@@ -9,6 +9,9 @@
 		private $_content;
 		private $_prix;
         private $_cancel;
+        private $_listGenreLibelle;
+        private $_listGenreId;
+        private $_pastEvent;
 
 		public function __construct(){
 		}
@@ -37,6 +40,11 @@
 
 		public function setDate_heure_evenement($data){
 			$this->_date = $data;
+			if($data < date("Y-m-d H:i:s")){
+			    $this->setPastEventStatus(true);
+            }else{
+                $this->setPastEventStatus(false);
+            }
 		}
 
 		public function setContenu_evenement($data){
@@ -53,6 +61,18 @@
             }else{
                 $this->_cancel = false;
             }
+        }
+
+        public function setListGenreLibelle($data){
+            $this->_listGenreLibelle = $data;
+        }
+
+        public function setListGenreId($data){
+            $this->_listGenreId = $data;
+        }
+
+        public function setPastEventStatus($data){
+            $this->_pastEvent = $data;
         }
 		
 		/** GETTERS **/
@@ -103,5 +123,25 @@
 
         public function getShortContent(){
             return substr($this->_content,0,300) . "..." ;
+        }
+
+        public function getListGenreLibelle(){
+            return $this->_listGenreLibelle;
+        }
+
+        public function getListGenreId(){
+            return $this->_listGenreId;
+        }
+
+        public function getPrix(){
+            return $this->_prix;
+        }
+
+        public function getCancel(){
+                return $this->_cancel;
+        }
+
+        public function getPastEventStatus(){
+            return $this->_pastEvent;
         }
 	}

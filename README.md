@@ -1,6 +1,27 @@
 #*DOCUMENTATION*
 ##Objects
-* ###Evenements/Actualites
+* ###Evenements
+
+| Methode        | Commentaire | 
+| ------------- |:-------------:| 
+| getId()      | return l'id |
+| getTitle()      | return le titre |
+| getImg()    | return l'image      |
+| getDate() | return la date et l'heure au format YYYY-MM-DD HH:MM:SS|
+| getFrenchDate() | return la date au format  DD/MM/YYYY|     
+| getDay() | return le jour |
+| getMonth() | return le mois en lettre |
+| getHour() | return l'heure au format HH:MM:SS|
+| getContent() | return le contenue  |
+| getShortContent() | return le contenu limité à 300 char.  |
+| getPrix() | return le prix  |
+| getCancel() | return true si l'evenement est annulé  |
+| getListGenreId() | return une chaine de char. concatenée par une virgule d' ID de genre musical  |
+| getListGenreLibelle() | return une chaine de char. concatenée par une virgule de genres musical  |
+| getPastEventStatus() | return true si l'event est passé  |
+
+* ###Actualites
+
 | Methode        | Commentaire | 
 | ------------- |:-------------:| 
 | getId()      | return l'id |
@@ -26,6 +47,14 @@
 | ------------- |:-------------:| 
 | getId()      | return l'id |
 | getMedia()      | return le titre |
+
+* ###Genre
+
+| Methode        | Commentaire | 
+| ------------- |:-------------:| 
+| getId()      | return l'id |
+| getLibelle()      | return le libelle |
+| getSelected()    | return true si le filtre et appliqué |
 
 ##Views
 

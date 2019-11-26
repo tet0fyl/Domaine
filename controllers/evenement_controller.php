@@ -1,6 +1,8 @@
 <?php
 	include("models/evenementManager_class.php"); // on inclut le fichier contenant les fonctions d'appels à la BDD
-	include("models/evenement_class.php"); // inclusion de la classe pour les articles
+	include("models/evenement_class.php"); // inclusion de la classe pour les evenement
+    include("models/genre_class.php"); // inclusion de la classe pour les genres
+
 	
 	class evenement_ctrl extends controller{
 
@@ -19,13 +21,26 @@
 			$data['page']	= 'evenement';
 			
 			$objEvenementManager	= new evenementManager;
-			$arrEvenement 		= $objEvenementManager->getList();	
-			
-			$data["arrEvenement"]= $arrEvenement;
+			$arrEvenement 		= $objEvenementManager->getList();
+            $arrGenre = $objEvenementManager->getListGenre();
+            $data["arrGenre"]= $arrGenre;
+            $data["arrEvenement"]= $arrEvenement;
 			$this->_contenu = "evenement.php";
 			$this->display($data);
 
 		}
+
+        public function evenementByGenre(){
+            $data['page']	= 'evenement';
+            $objEvenementManager	= new evenementManager;
+            $arrEvenement 		= $objEvenementManager->getListByGenre($_GET['id']);
+            $arrGenre = $objEvenementManager->getListGenre();
+            $data["arrGenre"]= $arrGenre;
+            $data["genre"]= $data["arrGenre"][$_GET['id'] - 1]["libele"];
+            $data["arrEvenement"]= $arrEvenement;
+            $this->_contenu = "evenement.php";
+            $this->display($data);
+        }
 
         public function single(){
             $data['page']	= 'evenement';
@@ -37,5 +52,7 @@
             $this->_contenu = "objects/single/evenement_object.php";
             $this->display($data);
         }
+
+
 		
 	}
