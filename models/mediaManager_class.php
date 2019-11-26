@@ -10,6 +10,9 @@
             $strQuery = "SELECT * FROM Medias";
             $query = $this->_db->query($strQuery);
             $arrResult = $query->fetchAll();
+            if($intLimit!=NULL){
+                $strQuery .=   " LIMIT " . $intLimit;
+            }
             return $arrResult;
 		}
 		

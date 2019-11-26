@@ -9,13 +9,6 @@
 		public function __construct(){
 			parent::__construct();
 		}
-
-		public function home(&$data){
-            $data['page']	= 'home';
-            $objEvenementManager	= new evenementManager;
-			$arrEvenement		= $objEvenementManager->getList();			
-			$data["arrEvenement"]= $arrEvenement;
-		}
 		
 		public function evenement(){
 			$data['page']	= 'evenement';
@@ -53,6 +46,4 @@
             $this->display($data);
         }
 
-
-		
 	}

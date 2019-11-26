@@ -71,6 +71,7 @@ Le tableau ci dessous présente les views objects utilisés dans les views princ
 | home.php     | views/object/home/actualite_object.php |
 | actualite.php     | views/object/own_page/actualite_object.php |
 | evenement.php     | views/object/own_page/evenement_object.php |
+| evenement.php     | views/object/own_page/genre_object.php |
 | media.php     | views/object/own_page/media_object.php |
 | presse.php     | views/object/own_page/presse_object.php |
 | article seul     | views/object/single/evenement_object.php |

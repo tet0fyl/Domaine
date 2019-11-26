@@ -15,7 +15,7 @@
                             GROUP BY Evenements.id_evenement
                             ORDER BY date_heure_evenement DESC";
             if($intLimit!=NULL){
-                $strQuery .=   "LIMIT " . $intLimit;
+                $strQuery .=   " LIMIT " . $intLimit;
             }
 
             $query = $this->_db->query($strQuery);
