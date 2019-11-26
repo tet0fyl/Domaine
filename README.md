@@ -1,6 +1,8 @@
-#*DOCUMENTATION*
-##Objects
-* ###Evenements
+DOCUMENTATION
+================
+Objects
+---------
+* Evenements
 
 | Methode        | Commentaire | 
 | ------------- |:-------------:| 
@@ -20,7 +22,7 @@
 | getListGenreLibelle() | return une chaine de char. concatenée par une virgule de genres musical  |
 | getPastEventStatus() | return true si l'event est passé  |
 
-* ###Actualites
+* Actualites
 
 | Methode        | Commentaire | 
 | ------------- |:-------------:| 
@@ -35,20 +37,22 @@
 | getContent() | return le contenue  |
 | getShortContent() | return le contenu limité à 300 char.  |
 
-* ###Presses
+* Presses
+
 | Methode        | Commentaire | 
 | ------------- |:-------------:| 
 | getId()      | return l'id |
 | getFichier()    | return l'image      |
 | getDate()    | return l'image      |
 
-* ###Medias
+* Medias
+
 | Methode        | Commentaire | 
 | ------------- |:-------------:| 
 | getId()      | return l'id |
 | getMedia()      | return le titre |
 
-* ###Genre
+* Genre
 
 | Methode        | Commentaire | 
 | ------------- |:-------------:| 
@@ -56,9 +60,10 @@
 | getLibelle()      | return le libelle |
 | getSelected()    | return true si le filtre et appliqué |
 
-##Views
+Views
+---------
 
-Le tableau ci dessous présente les views objects utilisés dans les views principales  
+Le tableau ci dessous présente les views objects utilisés dans les views principales :  
 
 | Views        | Object View | 
 | ------------- |:-------------:| 
@@ -71,10 +76,12 @@ Le tableau ci dessous présente les views objects utilisés dans les views princ
 | article seul     | views/object/single/evenement_object.php |
 | article seul     | views/object/single/actualite_object.php |
 
-##Structure
-* ###controllers
+Structure
+---------
+
+* controllers
    * *nomDuController_controller.php* -> assemble un model et une view.
-* ###model
+* model
    * *nomDuModel_class.php* -> décrit un objet avec ses attributs et méthodes.
     
    * *nomDuModelManager_class.php* -> Requête MySQL liée à la table de l'objet.
