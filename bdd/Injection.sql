@@ -159,7 +159,40 @@ MEMBRE ANNUEL : Participation libre
 L''événement est réservé aux membres de l''association Six Six.
 
 Parking gratuit à proximité, animaux, nourriture et boissons extérieurs ne sont pas tolérés.",
-                                                                '3','0','20191031.jpg');
+                                                                '3','0','20191031.jpg'),
+        ('Ølten / Membrane / Khöbalt','2019-09-21 19:00:00', "Six Six et Le Domaine présentent :
+
+• Ølten (Post-Metal, Neuchâtel, Suisse)
+https://youtu.be/00GGjVY_uR8
+(❤ Rosetta, Russian Circles)
+
+• MEMBRANE (Post-Hardcore, Vesoul)
+https://youtu.be/XC2U_LmIFZY
+(❤ Amenra, Unfold)
+
+• Khöbalt (Post-Rock, Belfort)
+https://youtu.be/fmMIoV7m-A0
+(❤ Red Sparowes, Caspian)
+
+—
+Samedi 21 Septembre 2019 au Domaine - 27 avenue Foch à Altkirch.
+
+Ouverture des portes et Happy Hour : 19h00
+Début des concerts : 20h00
+Fin des concerts : 23h30
+Fermeture du Domaine : 00h30
+
+—
+P.A.F. : 6€ (adhésion journalière incluse).
+MEMBRE ANNUEL : 3€.
+(Possibilité d''adhésion annuelle à Six Six sur place, 10€ pour toute l''année avec l''entrée du jour offerte).
+
+—
+L''événement est réservé aux membres de l''association Six Six.
+
+Parking gratuit à proximité, animaux, nourriture et boissons extérieurs ne sont pas tolérés.",
+         '3','0','20190921.jpg');
+
 
 
 #------------------------------------------------------------
@@ -237,14 +270,16 @@ INSERT INTO Administrateurs VALUES
 
 INSERT INTO Genres VALUES
         (NULL, "Rock"),
+        (NULL, "Punk"),
         (NULL, "Electro"),
-        (NULL, "Rap"),
+        (NULL, "Hip-Hop"),
         (NULL, "Metal"),
-        (NULL, "Jazz");
+        (NULL, "Jazz"),
+        (NULL, "Ska");
 
 #------------------------------------------------------------
 # Injection Table: TypeEvenement
 #------------------------------------------------------------
 
 INSERT INTO TypeEvenement values
-        (2,1),(2,3),(1,2),(2,4),(2,5);
+        (3,1),(2,2),(7,2),(3,3),(3,4),(4,4),(3,5),(1,6),(5,6);

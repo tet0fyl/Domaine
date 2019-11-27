@@ -11,7 +11,7 @@ CREATE TABLE Evenements(
         id_evenement         Int  Auto_increment  NOT NULL ,
         titre_evenement      Varchar (200) NOT NULL ,
         date_heure_evenement Datetime NOT NULL ,
-        contenu_evenement    Varchar (500) NOT NULL ,
+        contenu_evenement    TEXT NOT NULL ,
         prix_evenement       Float NOT NULL ,
         cancel_evenement     Bool NOT NULL ,
         affiche_evenement    Varchar (250) NOT NULL
@@ -49,7 +49,7 @@ CREATE TABLE Presses(
 CREATE TABLE Actualites(
         id_actualite      Int  Auto_increment  NOT NULL ,
         titre_actualite   Varchar (200) NOT NULL ,
-        contenu_actualite Varchar (500) NOT NULL ,
+        contenu_actualite TEXT NOT NULL ,
         date_actualite    Date NOT NULL ,
         affiche_actualite Varchar (250) NOT NULL
 	,CONSTRAINT Actualites_PK PRIMARY KEY (id_actualite)
