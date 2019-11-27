@@ -8,7 +8,7 @@ include("models/evenement_class.php"); // inclusion de la classe pour les evenem
 include("models/mediaManager_class.php"); // on inclut le fichier contenant les fonctions d'appels à la BDD
 include("models/media_class.php"); // inclusion de la classe pour les medias
 
-include("models/slider_class.php"); // inclusion de la classe pour les medias
+include("models/slider_class.php"); // inclusion de la classe pour les sliders
 
 
 class home_ctrl extends controller{
