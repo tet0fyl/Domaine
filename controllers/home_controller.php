@@ -23,7 +23,7 @@ class home_ctrl extends controller{
         $arrEvenement 		= $objEvenementManager->getList(4);
 
         $objMediaManager	= new mediaManager;
-        $arrMedia 		= $objMediaManager->getList(5);
+        $arrMedia 		= $objMediaManager->getList(4);
 
         $data["arrActualite"]= $arrActualite;
         $data["arrEvenement"]= $arrEvenement;

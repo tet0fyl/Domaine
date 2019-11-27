@@ -51,6 +51,7 @@ Objects
 | ------------- |:-------------:| 
 | getId()      | return l'id |
 | getMedia()      | return le titre |
+| getIsImg()      | return true si c'est une image ou false pour une video |
 
 * Genre
 
@@ -69,6 +70,7 @@ Le tableau ci dessous présente les views objects utilisés dans les views princ
 | ------------- |:-------------:| 
 | home.php     | views/object/home/evenement_object.php |
 | home.php     | views/object/home/actualite_object.php |
+| home.php     | views/object/home/slider_object.php |
 | actualite.php     | views/object/own_page/actualite_object.php |
 | evenement.php     | views/object/own_page/evenement_object.php |
 | evenement.php     | views/object/own_page/genre_object.php |

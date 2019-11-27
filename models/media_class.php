@@ -4,6 +4,7 @@
 
 		private $_id;
 		private $_media;
+		private $_isImg;
 
 		public function __construct(){
 		}
@@ -25,6 +26,16 @@
 
         public function setMedia($data){
             $this->_media = $data;
+            if(preg_match("(jpg|jpeg|gif|png)", explode(".", $data)[1])){
+                $this->setIsImg(true);
+            }else{
+                $this->setIsImg(false);
+            }
+
+        }
+
+        public function setIsImg($data){
+            $this->_isImg = $data;
         }
 
         /** GETTERS **/
@@ -34,5 +45,9 @@
 
         public function getMedia(){
             return $this->_media;
+        }
+
+        public function getTIsImg($data){
+            return $this->_isImg;
         }
 	}
