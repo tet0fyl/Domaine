@@ -8,6 +8,9 @@ include("models/evenement_class.php"); // inclusion de la classe pour les evenem
 include("models/mediaManager_class.php"); // on inclut le fichier contenant les fonctions d'appels à la BDD
 include("models/media_class.php"); // inclusion de la classe pour les medias
 
+include("models/slider_class.php"); // inclusion de la classe pour les medias
+
+
 class home_ctrl extends controller{
 
     public function __construct(){
@@ -27,7 +30,7 @@ class home_ctrl extends controller{
 
         $data["arrActualite"]= $arrActualite;
         $data["arrEvenement"]= $arrEvenement;
-        $data["arrMedia"]= $arrMedia;
+        $data["arrSlider"]= $arrMedia;
 
         $this->_contenu = "home.php";
         $this->display($data);
