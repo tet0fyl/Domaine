@@ -11,22 +11,26 @@
 		}
 		
 		public function evenement(){
-			$data['page']	= 'evenement';
+			$data['page']	= 'programme';
 			
 			$objEvenementManager	= new evenementManager;
-			$arrEvenement 		= $objEvenementManager->getList();
+			$arrFuturEvenement 		= $objEvenementManager->getList(NULL,">");
+            $arrPastEvenement 		= $objEvenementManager->getList(NULL,"<");
+
             $arrGenre = $objEvenementManager->getListGenre();
             $data["arrGenre"]= $arrGenre;
-            $data["arrEvenement"]= $arrEvenement;
-			$this->_contenu = "evenement.php";
+            $data["arrFuturEvenement"]= $arrFuturEvenement;
+            $data["arrPastEvenement"]= $arrPastEvenement;
+
+            $this->_contenu = "evenement.php";
 			$this->display($data);
 
 		}
 
         public function evenementByGenre(){
-            $data['page']	= 'evenement';
+            $data['page']	= 'programme';
             $objEvenementManager	= new evenementManager;
-            $arrEvenement 		= $objEvenementManager->getListByGenre($_GET['id']);
+            $arrEvenement 		= $objEvenementManager->getList($_GET['id']);
             $arrGenre = $objEvenementManager->getListGenre();
             $data["arrGenre"]= $arrGenre;
             $data["genre"]= $data["arrGenre"][$_GET['id'] - 1]["libele"];

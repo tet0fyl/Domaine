@@ -12,12 +12,22 @@
     }
 
 ?>
-
-
+<h2>Prochainement</h2>
+<hr>
 <?php 
-	foreach($data["arrEvenement"] as $arrDetailEvenement){
+	foreach($data["arrFuturEvenement"] as $arrDetailEvenement){
 		$objEvenement = new Evenement;
 		$objEvenement->hydrate($arrDetailEvenement);
 		include("views/objects/own_page/evenement_object.php");
 	}
+?>
+
+<h2>Passé</h2>
+<hr>
+<?php
+foreach($data["arrPastEvenement"] as $arrDetailEvenement){
+    $objEvenement = new Evenement;
+    $objEvenement->hydrate($arrDetailEvenement);
+    include("views/objects/own_page/evenement_object.php");
+}
 ?>
