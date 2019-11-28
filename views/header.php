@@ -9,7 +9,7 @@
 		<link rel="icon" type="image/png" href="ressources/images/logo/logo.png" />
     </head>
 	<body>
-		<header >
+		<header>
 			
 			</div>
 			<nav>
