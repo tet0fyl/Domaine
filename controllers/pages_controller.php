@@ -7,8 +7,8 @@
 		}
 		
 		public function contact(){
-			$data['page']	= 'contact';
-			$this->_contenu = "contact.php";
+			$data['page']	= 'infos pratiques';
+			$this->_contenu = "infosPratiques.php";
 			$this->display($data);
 		}
 	}

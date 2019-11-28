@@ -4,34 +4,11 @@
 	include("controllers/controller.php");
 	include("models/manager_class.php");
 
-	if (isset($_GET['controller'])){
-			$strCtrl = $_GET['controller'];
-	}else{
-		$strCtrl = "evenement_actualite";
-	}
-	
-	$strAction 	= (isset($_GET['action']))?$_GET['action']:"home";	
 
-	// Si il y a deux controllers
-	if(strpos($strCtrl,"_")==true){
-		$strCtrlTmp = $strCtrl;
-		$strCtrl = explode("_",$strCtrlTmp)[0];
-		$strCtrl2 = explode("_",$strCtrlTmp)[1];
-		include("controllers/".$strCtrl2."_controller.php");
 
-		$classeName2=$strCtrl2."_ctrl";
-		$objController2 = new $classeName2;
+        $strCtrl 	= (isset($_GET['controller']))?$_GET['controller']:"home";
+        $strAction 	= (isset($_GET['action']))?$_GET['action']:"home";
 
-		
-		include("controllers/".$strCtrl."_controller.php");
-	
-		$classeName = $strCtrl."_ctrl";
-		$objController = new $classeName;
-		$parentController = new Controller;
-		$parentController->display2Ctrl($objController,$objController2,$strAction);
-
-        // Sinon il y a un seul controllers
-	}else{
 		
 		include("controllers/".$strCtrl."_controller.php");
 		$classeName = $strCtrl."_ctrl";
@@ -39,5 +16,3 @@
 		$objController->$strAction();
 	
 
-	}
-	

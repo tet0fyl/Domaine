@@ -1,31 +1,43 @@
 <?php
 	include("models/evenementManager_class.php"); // on inclut le fichier contenant les fonctions d'appels à la BDD
-	include("models/evenement_class.php"); // inclusion de la classe pour les articles
+	include("models/evenement_class.php"); // inclusion de la classe pour les evenement
+    include("models/genre_class.php"); // inclusion de la classe pour les genres
+
 	
 	class evenement_ctrl extends controller{
 
 		public function __construct(){
 			parent::__construct();
 		}
-
-		public function home(&$data){
-            $data['page']	= 'home';
-            $objEvenementManager	= new evenementManager;
-			$arrEvenement		= $objEvenementManager->getList();			
-			$data["arrEvenement"]= $arrEvenement;
-		}
 		
 		public function evenement(){
-			$data['page']	= 'evenement';
+			$data['page']	= 'programme';
 			
 			$objEvenementManager	= new evenementManager;
-			$arrEvenement 		= $objEvenementManager->getList();	
-			
-			$data["arrEvenement"]= $arrEvenement;
-			$this->_contenu = "evenement.php";
+			$arrFuturEvenement 		= $objEvenementManager->getList(NULL,">");
+            $arrPastEvenement 		= $objEvenementManager->getList(NULL,"<");
+
+            $arrGenre = $objEvenementManager->getListGenre();
+            $data["arrGenre"]= $arrGenre;
+            $data["arrFuturEvenement"]= $arrFuturEvenement;
+            $data["arrPastEvenement"]= $arrPastEvenement;
+
+            $this->_contenu = "evenement.php";
 			$this->display($data);
 
 		}
+
+        public function evenementByGenre(){
+            $data['page']	= 'programme';
+            $objEvenementManager	= new evenementManager;
+            $arrEvenement 		= $objEvenementManager->getList($_GET['id']);
+            $arrGenre = $objEvenementManager->getListGenre();
+            $data["arrGenre"]= $arrGenre;
+            $data["genre"]= $data["arrGenre"][$_GET['id'] - 1]["libele"];
+            $data["arrEvenement"]= $arrEvenement;
+            $this->_contenu = "evenement.php";
+            $this->display($data);
+        }
 
         public function single(){
             $data['page']	= 'evenement';
@@ -37,5 +49,5 @@
             $this->_contenu = "objects/single/evenement_object.php";
             $this->display($data);
         }
-		
+
 	}
