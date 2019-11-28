@@ -62,4 +62,14 @@ footer{
     nav ul li a{
         font-size: 20px;
     }
+    .logo-footer{
+        padding-left: 150px;
+    }
+    .coordonnees{
+        padding-left: 100px;
+    }
+    .newsletter{
+        padding-left: 100px;
+        padding-top: 10px;
+    }
 }
