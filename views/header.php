@@ -10,8 +10,6 @@
     </head>
 	<body>
 		<header>
-			
-			</div>
 			<nav>
 				<ul>
 					<li <?php echo (isset($page) && $page=='home')?"class='active'":""; ?> ><a href="index.php?controller=home&action=home" title="Page d'accueil">Accueil</a></li>

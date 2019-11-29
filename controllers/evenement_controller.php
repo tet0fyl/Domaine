@@ -16,8 +16,7 @@
 			$objEvenementManager	= new evenementManager;
 			$arrFuturEvenement 		= $objEvenementManager->getList(NULL,">");
             $arrPastEvenement 		= $objEvenementManager->getList(NULL,"<");
-
-            $arrGenre = $objEvenementManager->getListGenre();
+            $arrGenre               = $objEvenementManager->getListGenre();
             $data["arrGenre"]= $arrGenre;
             $data["arrFuturEvenement"]= $arrFuturEvenement;
             $data["arrPastEvenement"]= $arrPastEvenement;
@@ -30,11 +29,13 @@
         public function evenementByGenre(){
             $data['page']	= 'programme';
             $objEvenementManager	= new evenementManager;
-            $arrEvenement 		= $objEvenementManager->getList($_GET['id']);
+            $arrFuturEvenement 		= $objEvenementManager->getList(NULL,">");
+            $arrPastEvenement 		= $objEvenementManager->getList(NULL,"<");
             $arrGenre = $objEvenementManager->getListGenre();
             $data["arrGenre"]= $arrGenre;
             $data["genre"]= $data["arrGenre"][$_GET['id'] - 1]["libele"];
-            $data["arrEvenement"]= $arrEvenement;
+            $data["arrFuturEvenement"]= $arrFuturEvenement;
+            $data["arrPastEvenement"]= $arrPastEvenement;
             $this->_contenu = "evenement.php";
             $this->display($data);
         }

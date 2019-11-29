@@ -6,7 +6,7 @@
 			parent::__construct();
 		}
 		
-		public function getList($intLimit=NULL){
+		public function getImgList($intLimit=NULL){
             $strQuery = "    SELECT * FROM Medias 
                             WHERE media LIKE '%jpg%' 
                             OR media LIKE '%png%' 

@@ -1,6 +1,8 @@
 <?php
 	session_start();
 
+
+    define('WEBROOT', dirname( __FILE__ ));
 	include("controllers/controller.php");
 	include("models/manager_class.php");
 

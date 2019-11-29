@@ -8,8 +8,6 @@ include("models/evenement_class.php"); // inclusion de la classe pour les evenem
 include("models/mediaManager_class.php"); // on inclut le fichier contenant les fonctions d'appels à la BDD
 include("models/media_class.php"); // inclusion de la classe pour les medias
 
-include("models/slider_class.php"); // inclusion de la classe pour les sliders
-
 
 class home_ctrl extends controller{
 
@@ -26,11 +24,11 @@ class home_ctrl extends controller{
         $arrEvenement 		= $objEvenementManager->getList(4);
 
         $objMediaManager	= new mediaManager;
-        $arrMedia 		= $objMediaManager->getList(4);
+        $arrMedia 		= $objMediaManager->getImgList(4);
 
         $data["arrActualite"]= $arrActualite;
         $data["arrEvenement"]= $arrEvenement;
-        $data["arrSlider"]= $arrMedia;
+        $data["arrMedia"]= $arrMedia;
 
         $this->_contenu = "home.php";
         $this->display($data);

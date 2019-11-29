@@ -19,10 +19,8 @@
 
             $strQuery .= " GROUP BY Evenements.id_evenement";
 
-
-
             if(isset($_GET['id'])){
-                $strQuery .=  "HAVING listGenreId LIKE '%". $_GET['id'] ."%'";
+                $strQuery .=  " HAVING listGenreId LIKE '%". $_GET['id'] ."%'";
             }
 
             $strQuery .=  " ORDER BY date_heure_evenement DESC ";

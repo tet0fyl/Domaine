@@ -1,13 +1,15 @@
-<h2>C'est la page d'acceuil</h2>
-
-<h3>Slider :</h3>
+<!-- Tu fais tes div pour contenir la view des objets -->
+<div class="carrouselMediaContainer">
+    <div class="carrouselMediaPanel">
 <?php
-foreach($data["arrSlider"] as $dataSlider){
-    $objSlider = new Slider($urlFichierMedia);
-    $objSlider->hydrate($dataSlider);
-    include("views/objects/home/slider_object.php");
+foreach($data["arrMedia"] as $dataMedia){
+    $objMedia = new Media();
+    $objMedia->hydrate($dataMedia);
+    include("views/objects/home/media_object.php"); // <-- Puis tu te rend dans ce fichier pour modifier l'objet en lui meme
 }
 ?>
+    </div>
+</div>
 
 <h3>EVENT :</h3>
 <?php
@@ -24,5 +26,5 @@ foreach($data["arrSlider"] as $dataSlider){
 		$objActualite = new Actualite;
 		$objActualite->hydrate($dataActu);
 		include("views/objects/home/actualite_object.php");
-	}	
+	}
 ?>

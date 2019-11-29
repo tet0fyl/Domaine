@@ -11,7 +11,7 @@
 		public function media(){
 			$data['page']	= 'media';
             $objMediaManager	= new mediaManager;
-            $arrMedia		= $objMediaManager->getList();
+            $arrMedia		= $objMediaManager->getImgList();
 			
 			$data["arrMedia"]= $arrMedia;
 			$this->_contenu = "media.php";

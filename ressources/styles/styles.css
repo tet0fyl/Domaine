@@ -73,3 +73,33 @@ footer{
         padding-top: 10px;
     }
 }
+
+/*  CSS EXEMPLE A L'ARRACHE DE SLIDER */
+.carrouselMediaContainer{
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carrouselMediaPanel{
+    position: relative;
+    display: flex;
+    width: 400%;
+    flex-wrap: nowrap;
+    animation: slide linear 15s alternate infinite;
+}
+
+.aMediaPanel{
+    width: 100%;
+    position: relative;
+
+}
+
+@keyframes slide {
+    0%{
+        left: 0px;
+    }
+    100%{
+        left: -300%;
+    }
+}
