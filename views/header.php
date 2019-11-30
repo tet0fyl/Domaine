@@ -19,6 +19,14 @@
                     <li <?php echo (isset($page) && $page=='media')?"class='active'":""; ?> ><a href="media" title="Presse">Media</a></li>
                     <li <?php echo (isset($page) && $page=='infos pratiques')?"class='active'":""; ?> ><a href="contact" title="Infos Pratiques">Infos Pratiques</a></li>
                     <li><a href="https://www.helloasso.com/associations/six-six/adhesions/adhesion-annuelle-six-six" target="_blank" title="Devenir adhérent">Devenir adhérent</a></li>
+                    <?php
+                    if(isset($_SESSION['admin']) && $_SESSION['admin']) {
+                        ?>
+                        <li><a href="admin-deconnection" title="Deconnexion">Deconnexion</a></li>
+                        <?php
+                    }
+                    ?>
+
                 </ul>
 			</nav>
 		</header>

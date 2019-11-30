@@ -1,5 +1,8 @@
 <?php
 	session_start();
+	if(isset($_SESSION['admin']) && $_SESSION['admin']){
+	    echo "<h1>Vous êtes Admin</h1>";
+    }
 
 
     define('WEBROOT', dirname( __FILE__ ));

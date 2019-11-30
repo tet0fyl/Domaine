@@ -1,6 +1,5 @@
 <?php
-include("models/presseManager_class.php"); // on inclut le fichier contenant les fonctions d'appels à la BDD
-include("models/presse_class.php"); // inclusion de la classe pour les articles
+include("models/adminManager_class.php"); // on inclut le fichier contenant les fonctions d'appels à la BDD
 
 class admin_ctrl extends controller{
 
@@ -13,6 +12,25 @@ class admin_ctrl extends controller{
         $this->_contenu = "/admin/admin_portail.php";
         $this->display($data);
     }
+
+    public function admin_connexion(){
+        $data['page']	= 'admin';
+        $adminManager = new AdminManager();
+        if($adminManager->checkConnexion()){
+            $_SESSION['admin'] = true;
+        }else{
+            $_SESSION['admin'] = false;
+        }
+        $this->_contenu = "/admin/admin_portail.php";
+        $this->display($data);
+    }
+
+    public function admin_deconnexion(){
+        $_SESSION['admin'] = false;
+        header('Location: home');
+    }
+
+
 
 
 }

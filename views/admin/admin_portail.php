@@ -1,14 +1,14 @@
 <h1>Espace Admin</h1>
-<section>
-<form>
+<div>
+<form method="post" action="admin-connexion">
     <div>
-    <label for="pseudo">Identifiant</label>
-    <input type="text">
+    <label for="identifiant">Identifiant</label>
+    <input type="text" name="identifiant">
     </div>
     <div>
-    <label for="password">Mot de passe : </label>
-    <input type="password">
+    <label for="password" >Mot de passe : </label>
+    <input type="password" name="password">
     </div>
     <input type="submit">
 </form>
-</section>
+</div>

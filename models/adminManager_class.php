@@ -1,6 +1,6 @@
 <?php
 
-class actualiteManager extends manager{
+class adminManager extends manager{
 
     public function __construct(){
         parent::__construct();
@@ -10,16 +10,22 @@ class actualiteManager extends manager{
         $strQuery = "SELECT * FROM Actualites";
         $query = $this->_db->query($strQuery);
         $arrResult = $query->fetchAll();
-        if($intLimit!=NULL){
-            $strQuery .=   " LIMIT " . $intLimit;
-        }
-        return $arrResult;
+
     }
 
-    public function get($intId){
-        $strQuery = "SELECT * FROM Actualites WHERE id_actualite = $intId";
+    public function checkConnexion(){
+        $strQuery = "SELECT * FROM Administrateurs 
+                    WHERE identifiant_admin LIKE '" . $_POST['identifiant'] .
+                    "' AND password_admin LIKE '" . $_POST['password'] . "'";
         $query = $this->_db->query($strQuery);
-        $arrResult = $query->fetch();
-        return $arrResult;
+        $arrResult = $query->fetchAll();
+
+        if(count($arrResult) > 0){
+            return true;
+        }else{
+            return false;
+        }
+
     }
+
 }
