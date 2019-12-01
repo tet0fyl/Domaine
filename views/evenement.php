@@ -1,5 +1,11 @@
 <h2>C'est la page de event</h2>
 
+<?php
+if(isset($_SESSION['admin']) && $_SESSION['admin']) {
+    include("views/admin/form_evenement.php");
+}
+?>
+
 
 <?php
     foreach($data["arrGenre"] as $arrDetailGenre){
