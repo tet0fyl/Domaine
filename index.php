@@ -1,6 +1,8 @@
 <?php
 	session_start();
 
+
+
 	include("controllers/controller.php");
 	include("models/manager_class.php");
 

@@ -16,7 +16,6 @@ if(isset($_SESSION['admin']) && $_SESSION['admin']) {
         }
         include("views/objects/own_page/genre_object.php");
     }
-
 ?>
 
 

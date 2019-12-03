@@ -7,7 +7,7 @@ class admin_ctrl extends controller{
         parent::__construct();
     }
 
-    public function admin_portail(){
+    public function portail(){
         if(isset($_SESSION['admin']) && $_SESSION['admin']){
             header('Location: home');
         }else{
@@ -17,7 +17,7 @@ class admin_ctrl extends controller{
         }
     }
 
-    public function admin_connexion(){
+    public function connexion(){
         $data['page']	= 'admin';
         $adminManager = new AdminManager();
         if($adminManager->checkConnexion()){
@@ -31,9 +31,15 @@ class admin_ctrl extends controller{
         $this->display($data);
     }
 
-    public function admin_deconnexion(){
+    public function deconnexion(){
         $_SESSION['admin'] = false;
         header('Location: home');
+    }
+
+    public function postevenement(){
+        $adminManager = new AdminManager();
+        $adminManager->addEvenement();
+        header('Location: evenement');
     }
 
 

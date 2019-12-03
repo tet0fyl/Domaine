@@ -5,10 +5,9 @@ RewriteEngine on
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 
-RewriteRule ^admin-connexion$   index.php?controller=admin&action=admin_connexion
-RewriteRule ^admin-deconnection$   index.php?controller=admin&action=admin_deconnexion
+RewriteRule ^admin-([a-z]+)$   index.php?controller=admin&action=$1
 
-RewriteRule ^admin$   index.php?controller=admin&action=admin_portail
+RewriteRule ^admin$   index.php?controller=admin&action=portail
 RewriteRule ^contact$   index.php?controller=pages&action=contact
 RewriteRule ^([a-z]+)$   index.php?controller=$1&action=$1
 RewriteRule ^([a-z]+)-genre-([0-9]+)$   index.php?controller=$1&action=evenementByGenre&id=$2

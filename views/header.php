@@ -22,7 +22,7 @@
                     <?php
                     if(isset($_SESSION['admin']) && $_SESSION['admin']) {
                         ?>
-                        <li><a href="admin-deconnection" title="Deconnexion">Deconnexion</a></li>
+                        <li><a href="admin-deconnexion" title="Deconnexion">Deconnexion</a></li>
                         <?php
                     }
                     ?>
