@@ -29,7 +29,6 @@ class home_ctrl extends controller{
         $data["arrActualite"]= $arrActualite;
         $data["arrEvenement"]= $arrEvenement;
         $data["arrMedia"]= $arrMedia;
-
         $this->_contenu = "home.php";
         $this->display($data);
     }

@@ -11,4 +11,7 @@
     </div>
     <input type="submit">
 </form>
+    <?php if(isset($data['error']) && $data['error']){?>
+    <p style="color: red">Login ou Mot de passe incorrect</p>
+    <?php } ?>
 </div>

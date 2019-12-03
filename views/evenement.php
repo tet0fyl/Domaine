@@ -18,22 +18,41 @@ if(isset($_SESSION['admin']) && $_SESSION['admin']) {
     }
 
 ?>
-<h2>Prochainement</h2>
-<hr>
-<?php 
-	foreach($data["arrFuturEvenement"] as $arrDetailEvenement){
-		$objEvenement = new Evenement;
-		$objEvenement->hydrate($arrDetailEvenement);
-		include("views/objects/own_page/evenement_object.php");
-	}
-?>
 
-<h2>Passé</h2>
-<hr>
+
+
 <?php
-foreach($data["arrPastEvenement"] as $arrDetailEvenement){
-    $objEvenement = new Evenement;
-    $objEvenement->hydrate($arrDetailEvenement);
-    include("views/objects/own_page/evenement_object.php");
+if(count($data["arrFuturEvenement"]) == 0 && count($data["arrPastEvenement"]) == 0){?>
+    <p>Pas d'évenement dans ce genre musical pour le moment !</p>
+<?php } else {?>
+
+    <?php if(count($data["arrFuturEvenement"]) != 0) { ?>
+
+        <h2>Prochainement</h2>
+        <hr>
+
+        <?php
+        foreach ($data["arrFuturEvenement"] as $arrDetailEvenement) {
+            $objEvenement = new Evenement;
+            $objEvenement->hydrate($arrDetailEvenement);
+            include("views/objects/own_page/evenement_object.php");
+        }
+    }
+    ?>
+
+
+<?php
+if(count($data["arrPastEvenement"]) != 0){?>
+    <h2>Passé</h2>
+    <hr>
+    <?php
+    foreach ($data["arrPastEvenement"] as $arrDetailEvenement) {
+        $objEvenement = new Evenement;
+        $objEvenement->hydrate($arrDetailEvenement);
+        include("views/objects/own_page/evenement_object.php");
+
+    }
+}
 }
 ?>
+

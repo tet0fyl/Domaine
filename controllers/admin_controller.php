@@ -8,9 +8,13 @@ class admin_ctrl extends controller{
     }
 
     public function admin_portail(){
+        if(isset($_SESSION['admin']) && $_SESSION['admin']){
+            header('Location: home');
+        }else{
         $data['page']	= 'admin';
         $this->_contenu = "/admin/admin_portail.php";
         $this->display($data);
+        }
     }
 
     public function admin_connexion(){
@@ -18,8 +22,10 @@ class admin_ctrl extends controller{
         $adminManager = new AdminManager();
         if($adminManager->checkConnexion()){
             $_SESSION['admin'] = true;
+            header('Location: home');
         }else{
             $_SESSION['admin'] = false;
+            $data['error']	= true;
         }
         $this->_contenu = "/admin/admin_portail.php";
         $this->display($data);
