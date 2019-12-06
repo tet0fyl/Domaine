@@ -30,8 +30,7 @@ class adminManager extends manager{
                             '" . $_POST['content'] . "', '3', '0', '" . $_FILES['affiche']['name'] . "')";
         $this->_db->exec($strQuery);
         imgUpload();
-
-        /*$strQuery = "SELECT * FROM Evenements
+        /*$strQuery = "SELECT id_evenement FROM Evenements
                     WHERE titre_evenement LIKE '" . $_POST['titre'] .
             "' AND affiche_evenement LIKE '" . $_FILES['affiche']['name'] . "'";
         $query = $this->_db->query($strQuery);
@@ -41,9 +40,11 @@ class adminManager extends manager{
                     WHERE libele LIKE '" . $_POST['genre'] . "'";
         $query = $this->_db->query($strQuery);
         $arrResultGenre = $query->fetch();
-
-        $strQuery = "INSERT INTO `TypeEvenement` (`id_genre`, `id_evenement`) VALUES ('".$arrResultEvent['id_evenement']."', '".$arrResultGenre['id_genre']."')";
-        $this->_db->exec($strQuery);*/
+        */
+        $strQuery = "INSERT INTO `TypeEvenement` (`id_genre`, `id_evenement`) VALUES (
+                    " . $_POST['genre'] . " , ".
+                    $this->_db->lastInsertId() . ")";
+        $this->_db->exec($strQuery);
 
     }
 
