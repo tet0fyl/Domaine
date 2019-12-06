@@ -29,18 +29,7 @@ class adminManager extends manager{
                      VALUES (NULL, '" . $_POST['titre'] . "', '" . $_POST['date'] . " " . $_POST['heure'] . "',
                             '" . $_POST['content'] . "', '3', '0', '" . $_FILES['affiche']['name'] . "')";
         $this->_db->exec($strQuery);
-        imgUpload();
-        /*$strQuery = "SELECT id_evenement FROM Evenements
-                    WHERE titre_evenement LIKE '" . $_POST['titre'] .
-            "' AND affiche_evenement LIKE '" . $_FILES['affiche']['name'] . "'";
-        $query = $this->_db->query($strQuery);
-        $arrResultEvent = $query->fetch();
-
-        $strQuery = "SELECT * FROM Genres 
-                    WHERE libele LIKE '" . $_POST['genre'] . "'";
-        $query = $this->_db->query($strQuery);
-        $arrResultGenre = $query->fetch();
-        */
+        imgUpload("affiche","ressources/upload/afficheEvent/");
         $strQuery = "INSERT INTO `TypeEvenement` (`id_genre`, `id_evenement`) VALUES (
                     " . $_POST['genre'] . " , ".
                     $this->_db->lastInsertId() . ")";
@@ -51,18 +40,18 @@ class adminManager extends manager{
 }
 
 
-function imgUpload(){
+function imgUpload($postName,$path){
 // Testons si le fichier a bien été envoyé et s'il n'y a pas d'erreur
-if (isset($_FILES['affiche']) AND $_FILES['affiche']['error'] == 0) {
+if (isset($_FILES[$postName]) AND $_FILES[$postName]['error'] == 0) {
     // Testons si le fichier n'est pas trop gros
-    if ($_FILES['affiche']['size'] <= 1000000) {
+    if ($_FILES[$postName]['size'] <= 1000000) {
         // Testons si l'extension est autorisée
-        $infosfichier = pathinfo($_FILES['affiche']['name']);
+        $infosfichier = pathinfo($_FILES[$postName]['name']);
         $extension_upload = $infosfichier['extension'];
         $extensions_autorisees = array('jpg', 'jpeg', 'gif', 'png');
         if (in_array($extension_upload, $extensions_autorisees)) {
             // On peut valider le fichier et le stocker définitivement
-            move_uploaded_file($_FILES['affiche']['tmp_name'], 'ressources/upload/afficheEvent/' . basename($_FILES['affiche']['name']));
+            move_uploaded_file($_FILES[$postName]['tmp_name'], $path . basename($_FILES[$postName]['name']));
         }
     }
 }
