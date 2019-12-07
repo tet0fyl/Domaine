@@ -1,14 +1,24 @@
-<!-- Tu fais tes div pour contenir la view des objets -->
-<div class="carrouselMediaContainer">
-    <div class="carrouselMediaPanel">
+
+<div class="Slider">
+    <div class="SliderPanel">
 <?php
 foreach($data["arrMedia"] as $dataMedia){
     $objMedia = new Media();
     $objMedia->hydrate($dataMedia);
-    include("views/objects/home/media_object.php"); // <-- Puis tu te rend dans ce fichier pour modifier l'objet en lui meme
+    include("views/objects/home/media_object.php");
 }
 ?>
+        <div class="Caption">Caption</div>
     </div>
+        <div class="SliderControl">
+            <a class="left" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="right" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <div class="SliderPosition">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
 </div>
 
 <h3>EVENT :</h3>

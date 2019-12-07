@@ -12,8 +12,8 @@
 
             <div class="coordonnees">
                 <p>Le Domaine <br>
-                Rue<br>
-                Ville<br>
+                27 Avenue du Maréchal Foch<br>
+                68130 Altkirch<br>
                 </p>
             </div>
 
