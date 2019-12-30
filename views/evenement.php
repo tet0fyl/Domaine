@@ -1,4 +1,4 @@
-<h2>C'est la page de event</h2>
+<h2>Le Programme</h2>
 
 <?php
 if(isset($_SESSION['admin']) && $_SESSION['admin']) {
@@ -6,7 +6,8 @@ if(isset($_SESSION['admin']) && $_SESSION['admin']) {
 }
 ?>
 
-
+<h3>Filtre :</h3>
+<div class="d-flex">
 <?php
     foreach($data["arrGenre"] as $arrDetailGenre){
         $objGenre = new Genre;
@@ -17,7 +18,7 @@ if(isset($_SESSION['admin']) && $_SESSION['admin']) {
         include("views/objects/own_page/genre_object.php");
     }
 ?>
-
+</div>
 
 
 <?php
@@ -44,14 +45,16 @@ if(count($data["arrFuturEvenement"]) == 0 && count($data["arrPastEvenement"]) ==
 if(count($data["arrPastEvenement"]) != 0){?>
     <h2>Passé</h2>
     <hr>
+    <div class="past-event">
     <?php
     foreach ($data["arrPastEvenement"] as $arrDetailEvenement) {
         $objEvenement = new Evenement;
         $objEvenement->hydrate($arrDetailEvenement);
         include("views/objects/own_page/evenement_object.php");
-
     }
 }
 }
 ?>
+    </div>
+
 

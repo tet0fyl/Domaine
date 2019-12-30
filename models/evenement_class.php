@@ -121,8 +121,8 @@
 			return nl2br($this->_content);
 		}
 
-        public function getShortContent(){
-            return substr($this->_content,0,300) . "..." ;
+        public function getShortContent($intLimit = 300){
+            return substr(nl2br($this->_content),0,$intLimit) . "..." ;
         }
 
         public function getListGenreLibelle(){
