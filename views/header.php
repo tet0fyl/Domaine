@@ -1,4 +1,5 @@
 <?php include("tools/path.php")	?>
+<?php include("tools/utility.php")	?>
 <!DOCTYPE html>
 <html lang='fr'>
 	<head>

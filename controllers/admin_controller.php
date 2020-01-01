@@ -42,11 +42,9 @@ class admin_ctrl extends controller{
         header('Location: evenement');
     }
 
-    public function delevenement(){
+    public function deleteevenement(){
         $adminManager = new AdminManager();
         $adminManager->delete('evenements',$_GET['id']);
         header('Location: evenement');
     }
-
-
 }
