@@ -5,6 +5,7 @@ RewriteEngine on
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 
+RewriteRule ^admin-([a-z]+)-([0-9]+)$   index.php?controller=admin&action=$1&id=$2
 RewriteRule ^admin-([a-z]+)$   index.php?controller=admin&action=$1
 
 RewriteRule ^admin$   index.php?controller=admin&action=portail

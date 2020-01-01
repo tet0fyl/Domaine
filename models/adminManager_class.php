@@ -21,22 +21,31 @@ class adminManager extends manager{
     }
 
     public function addEvenement(){
-        print_r($_POST);
+        $fileName=imgUpload("affiche","ressources/upload/afficheEvent/");
+
         $strQuery = "INSERT INTO `Evenements` ( `id_evenement`, `titre_evenement`, 
                                                 `date_heure_evenement`, `contenu_evenement`, 
                                                 `prix_evenement`, `cancel_evenement`, 
                                                 `affiche_evenement`)
                      VALUES (NULL, '" . $_POST['titre'] . "', '" . $_POST['date'] . " " . $_POST['heure'] . "',
-                            '" . $_POST['content'] . "', '3', '0', '" . $_FILES['affiche']['name'] . "')";
+                            '" . $_POST['content'] . "', '3', '0', '" . $fileName . "')";
         $this->_db->exec($strQuery);
-        imgUpload("affiche","ressources/upload/afficheEvent/");
         $strQuery = "INSERT INTO `TypeEvenement` (`id_genre`, `id_evenement`) VALUES (
                     " . $_POST['genre'] . " , ".
                     $this->_db->lastInsertId() . ")";
         $this->_db->exec($strQuery);
-
     }
 
+    public function delete($table,$id){
+        if($table=='evenements'){
+            $strQuery = "DELETE FROM `TypeEvenement` WHERE id_evenement = " . $id;
+            $this->_db->exec($strQuery);
+        }
+
+
+        $strQuery = "DELETE FROM " . $table . " WHERE id_" . substr($table,0,strlen($table)-1)  . " = " . $id;
+        $this->_db->exec($strQuery);
+    }
 }
 
 
@@ -51,7 +60,9 @@ if (isset($_FILES[$postName]) AND $_FILES[$postName]['error'] == 0) {
         $extensions_autorisees = array('jpg', 'jpeg', 'gif', 'png');
         if (in_array($extension_upload, $extensions_autorisees)) {
             // On peut valider le fichier et le stocker définitivement
-            move_uploaded_file($_FILES[$postName]['tmp_name'], $path . basename($_FILES[$postName]['name']));
+            $fileName = date_format(new DateTime(), 'Ymd') . "." . pathinfo($_FILES[$postName]['name'])['extension'];
+            move_uploaded_file($_FILES[$postName]['tmp_name'], $path . $fileName);
+            return $fileName;
         }
     }
 }

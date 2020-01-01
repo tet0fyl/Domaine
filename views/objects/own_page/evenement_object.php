@@ -12,7 +12,7 @@
                                     <a title="modifier">&#x270E modifier</a>
                                 </div>
                                 <div class="d-flex">
-                                    <a title="supprimer">&#x2718 supprimer</a>
+                                    <a href='admin-delevenement-<?php echo $objEvenement->getId() ?>' title="supprimer">&#x2718 supprimer</a>
                                 </div>
                             </div>
                 </div>
