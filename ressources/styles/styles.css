@@ -180,7 +180,29 @@ footer{
         left: -300%;
     }
 }
+/*Calendrier*/
+.row {
+    border : 1px solid black;
+    width: 100%;
+    height: 100px;
+}
 
+.left {
+    float: left;
+    width: 200px;
+}
+
+.right {
+    float: left;
+    width: 400px;
+}
+
+.container {
+    width: 800px;
+    height: 200px;
+    margin: 20px;
+    display: block;
+}
 
 /*  RAJOUTER PAR THEO   */
 .card.genre{

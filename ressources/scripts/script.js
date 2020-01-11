@@ -12,4 +12,3 @@ if($id('addForm')){
         $id('addForm').getElementsByTagName('form')[0].style.display = "none"
     }
 }
-
