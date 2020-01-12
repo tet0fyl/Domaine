@@ -6,19 +6,23 @@
     </a> -->
 <article class="row">
     <div class="left">
-        <p>
+        <div class="date">
+        <span class="mois">
             <?php echo $objEvenement->getShortMonth(); ?>
-        </p>
-        <p>
+        </span>
+        <span class="jour">
             <?php echo $objEvenement->getDay(); ?>
-        </p>
+        </span>
+    </div>
     </div>
     <div class="right">
-        <p>
+        <div class="evenement">
+        <span class="titre">
             <?php echo $objEvenement->getTitle(); ?>
-        </p>
-        <p>
+        </span>
+        <span class="heure">
             <?php echo $objEvenement->getHourMin(); ?>
-        </p>
+        </span>
+    </div>
     </div>
 </article>

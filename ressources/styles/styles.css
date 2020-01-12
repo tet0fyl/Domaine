@@ -181,11 +181,6 @@ footer{
     }
 }
 /*Calendrier*/
-.row {
-    border : 1px solid black;
-    width: 100%;
-    height: 100px;
-}
 
 .left {
     float: left;
@@ -196,14 +191,66 @@ footer{
     float: left;
     width: 400px;
 }
-
-.container {
-    width: 800px;
-    height: 200px;
-    margin: 20px;
-    display: block;
+.calendrier{
+    display:inline-block;
+    position:relative;
+    cursor:pointer;
+    background:#fff;
+    font-weight:400;
+    color:#333!important;
+    font-size:15px;
+    line-height:100%;
+    -webkit-box-shadow:0 0 0 0.5px rgba(50,50,93,.17), 0 2px 5px 0 rgba(50,50,93,.1), 0 1px 1.5px 0 rgba(0,0,0,.07), 0 1px 2px 0 rgba(0,0,0,.08), 0 0 0 0 transparent!important;;
+    -moz-box-shadow:0 0 0 0.5px rgba(50,50,93,.17), 0 2px 5px 0 rgba(50,50,93,.1), 0 1px 1.5px 0 rgba(0,0,0,.07), 0 1px 2px 0 rgba(0,0,0,.08), 0 0 0 0 transparent!important;;
+    box-shadow:0 0 0 0.5px rgba(50,50,93,.17), 0 2px 5px 0 rgba(50,50,93,.1), 0 1px 1.5px 0 rgba(0,0,0,.07), 0 1px 2px 0 rgba(0,0,0,.08), 0 0 0 0 transparent!important;;
+    -webkit-border-radius:4px;border-radius:4px;
 }
-
+.date{
+    width:50px;
+    height:60px;
+    float:left;
+    position:relative;
+}
+.evenement{
+    height:60px;
+    float:left;
+    position:relative;
+    padding:0px 15px 0px 0px;
+}
+.mois{
+    display:block;
+    text-align:center;
+    padding:10px 0px 0px 0px;
+    font-size:10px;
+    color:#bf5549;
+    font-weight:bold;
+    line-height:110%;
+    text-transform:uppercase;
+}
+.jour{
+    display:block;
+    text-align:center;
+    padding:0px 0px 8px 0px;
+    font-size:28px;
+    font-weight:bold;
+    color:#333;
+    line-height:100%;
+}
+.titre{
+    height:15px;
+    display:block;
+    overflow:hidden;
+    margin-bottom:0px;
+    font-size:13px;
+    line-height:110%;
+    color:#333;
+    text-transform:uppercase;
+}
+.heure{
+    height:28px;
+    display:block;
+    overflow:hidden;
+}
 /*  RAJOUTER PAR THEO   */
 .card.genre{
     width: 10%;

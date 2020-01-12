@@ -22,8 +22,6 @@ foreach($data["arrMedia"] as $dataMedia){
 </div>
 
 <h3>EVENT :</h3>
-<!-- dans un premier temps je veux juste faire un genre de tableau simple et y ajouter le php des évenements
-donc la date et l'evenement correspondant, et si ca marche j'ameliore le rendu pour en faire un vrai calendrier-->
 <div class="calendrier">
 <div class="container">
 <?php
@@ -35,6 +33,7 @@ donc la date et l'evenement correspondant, et si ca marche j'ameliore le rendu p
 ?>
 </div>
 </div>
+
 <h3>ACTU :</h3>
 <?php
 	foreach($data["arrActualite"] as $dataActu){
