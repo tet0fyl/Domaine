@@ -113,8 +113,20 @@
             return $arrMonth[intval($month)-1] ;
         }
 
+        public function getShortMonth(){
+            $dayMonthYears = explode(" ",$this->_date)[0];
+            $month = explode("-",$dayMonthYears)[1];
+            $arrMonth = ["Jan","Fev","Mars","Avr","Mai","Juin","Juil","Aout","Sept","Oct","Nov","Dec"];
+            return $arrMonth[intval($month)-1] ;
+        }
+
         public function getHour(){
             return explode(" ",$this->_date)[1];
+        }
+
+        public function getHourMin(){
+            $time = explode(":", explode(" ",$this->_date)[1]);
+            return $time[0] . 'H' . $time[1];
         }
 
 		public function getContent(){

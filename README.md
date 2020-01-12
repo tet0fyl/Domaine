@@ -13,7 +13,9 @@ Objects
 | getFrenchDate() | return la date au format  DD/MM/YYYY|     
 | getDay() | return le jour |
 | getMonth() | return le mois en lettre |
+| getShortMonth() | return le mois court 3 - 4 lettre ex : Janv., Fev. |
 | getHour() | return l'heure au format HH:MM:SS|
+| getHourMin() | return l'heure au format ex: 19H30|
 | getContent() | return le contenue  |
 | getShortContent() | return le contenu limité à 300 char.  |
 | getPrix() | return le prix  |

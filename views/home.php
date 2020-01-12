@@ -26,32 +26,6 @@ foreach($data["arrMedia"] as $dataMedia){
 donc la date et l'evenement correspondant, et si ca marche j'ameliore le rendu pour en faire un vrai calendrier-->
 <div class="calendrier">
 <div class="container">
-    <div class="row">
-        <div class="left">
-            <h1>
-                DATE
-            </h1>
-        </div>
-        <div class="right">
-            <h2>
-                ÉVENEMENTS
-            </h2>
-        </div>
-    </div>
-    <div class="row">
-        <div class="left">
-            <h1>
-                DATE
-            </h1>
-        </div>
-        <div class="right">
-            <h2>
-                ÉVÈNEMENTS
-            </h2>
-        </div>
-    </div>
-</div>
-
 <?php
 	foreach($data["arrEvenement"] as $dataEvent){
 		$objEvenement = new Evenement;
@@ -59,7 +33,8 @@ donc la date et l'evenement correspondant, et si ca marche j'ameliore le rendu p
 		include("views/objects/home/evenement_object.php");
 	}
 ?>
-
+</div>
+</div>
 <h3>ACTU :</h3>
 <?php
 	foreach($data["arrActualite"] as $dataActu){
