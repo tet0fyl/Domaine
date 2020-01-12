@@ -17,9 +17,9 @@
     </div>
     <div class="right">
         <div class="evenement">
-        <span class="titre">
+        <strong class="titre">
             <?php echo $objEvenement->getTitle(); ?>
-        </span>
+        </strong>
         <span class="heure">
             <?php echo $objEvenement->getHourMin(); ?>
         </span>

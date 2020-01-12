@@ -183,15 +183,19 @@ footer{
 /*Calendrier*/
 
 .left {
+    margin-left: 20px;
+    margin-top: 10px;
     float: left;
-    width: 200px;
+    width: 60px;
 }
 
 .right {
+    margin-top: 20px;
     float: left;
     width: 400px;
 }
 .calendrier{
+    margin-left: 100px;
     display:inline-block;
     position:relative;
     cursor:pointer;
@@ -200,10 +204,17 @@ footer{
     color:#333!important;
     font-size:15px;
     line-height:100%;
-    -webkit-box-shadow:0 0 0 0.5px rgba(50,50,93,.17), 0 2px 5px 0 rgba(50,50,93,.1), 0 1px 1.5px 0 rgba(0,0,0,.07), 0 1px 2px 0 rgba(0,0,0,.08), 0 0 0 0 transparent!important;;
-    -moz-box-shadow:0 0 0 0.5px rgba(50,50,93,.17), 0 2px 5px 0 rgba(50,50,93,.1), 0 1px 1.5px 0 rgba(0,0,0,.07), 0 1px 2px 0 rgba(0,0,0,.08), 0 0 0 0 transparent!important;;
-    box-shadow:0 0 0 0.5px rgba(50,50,93,.17), 0 2px 5px 0 rgba(50,50,93,.1), 0 1px 1.5px 0 rgba(0,0,0,.07), 0 1px 2px 0 rgba(0,0,0,.08), 0 0 0 0 transparent!important;;
-    -webkit-border-radius:4px;border-radius:4px;
+    -webkit-box-shadow:0 0 0 0.5px rgba(50,50,93,.17), 0 2px 5px 0 rgba(50,50,93,.1), 0 1px 1.5px 0 rgba(0,0,0,.07), 0 1px 2px 0 rgba(0,0,0,.08), 0 0 0 0 transparent!important;
+    -moz-box-shadow:0 0 0 0.5px rgba(50,50,93,.17), 0 2px 5px 0 rgba(50,50,93,.1), 0 1px 1.5px 0 rgba(0,0,0,.07), 0 1px 2px 0 rgba(0,0,0,.08), 0 0 0 0 transparent!important;
+    box-shadow:0 0 0 0.5px rgba(50,50,93,.17), 0 2px 5px 0 rgba(50,50,93,.1), 0 1px 1.5px 0 rgba(0,0,0,.07), 0 1px 2px 0 rgba(0,0,0,.08), 0 0 0 0 transparent!important;
+    -webkit-border-radius:4px;
+    border-radius:4px;
+}
+.calendrier-selected{
+    background-color: #f4f4f4;
+}
+.calendrier:hover{
+    background-color: #f8f8f8;
 }
 .date{
     width:50px;

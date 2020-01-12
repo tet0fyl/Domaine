@@ -21,7 +21,6 @@ foreach($data["arrMedia"] as $dataMedia){
         </div>
 </div>
 
-<h3>EVENT :</h3>
 <div class="calendrier">
 <div class="container">
 <?php
