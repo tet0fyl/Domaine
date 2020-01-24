@@ -1,5 +1,32 @@
+@font-face {
+    font-family: "VFutura";
+    src: url("../fonts/VFutura-Light.otf") format("truetype");
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: "VFutura";
+    src: url("../fonts/VFutura-Medium.otf") format("truetype");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "VFutura";
+    src: url("../fonts/VFutura-Bold.otf") format("truetype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "VFutura";
+    src: url("../fonts/VFutura-Heavy.otf") format("truetype");
+    font-weight: 800;
+}
+
+
 body{
     margin: 0;
+    font-family: VFutura;
+    font-weight: 100;
 }
 
 a{
@@ -11,6 +38,8 @@ header{
     background-color: rgba(135, 143, 146, 0.2);
     border-bottom: solid 1px grey;
 }
+
+/*
 nav ul li a{
     display: block;
     font-size: 25px;
@@ -30,6 +59,7 @@ nav{
     padding-top: 10px;
     padding-bottom: 20px;
 }
+ */
 footer{
     width: 100%;
     height: 150px;
@@ -76,12 +106,12 @@ footer{
 
 
 @media screen and (max-width: 1500px){
-    nav ul li{
+    /*nav ul li{
     padding-left: 50px;
     }
     nav ul li a{
         font-size: 20px;
-    }
+    }*/
     .logo-footer{
         padding-left: 150px;
     }
@@ -340,6 +370,10 @@ a:hover > .card {
 
 .displayIfCheckBox:nth-child(n+3){
     display : none;
+}
+
+#adminDisplayForm > form{
+    display: none;
 }
 
 /*  ****************  */

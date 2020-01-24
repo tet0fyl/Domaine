@@ -1,9 +1,12 @@
 <h2>Le Programme</h2>
 
 <?php
-if(isset($_SESSION['admin']) && $_SESSION['admin']) {
-    include("views/admin/form_evenement.php");
-}
+if(isset($_SESSION['admin']) && $_SESSION['admin']) { ?>
+    <div id="adminDisplayForm">
+    <button class='btn btn-primary' >Ajouter</button>
+    <?php include("views/admin/form_evenement.php"); ?>
+    </div>
+<?php }
 ?>
 
 <h3>Filtre :</h3>
