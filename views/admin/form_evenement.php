@@ -1,27 +1,29 @@
 <form method="post" action="<?php echo (isset($objEvenement))?'admin-updateevenement-' . $objEvenement->getId():'admin-postevenement'; ?>" enctype="multipart/form-data">
-    <div>
+    <div class = 'form-group'>
         <label for="titre">Titre : </label>
-        <input type="text" id="titre" name="titre" value="<?php echo (isset($objEvenement))?$objEvenement->getTitle():''; ?>" required>
+        <input class="form-control" type="text" id="titre" name="titre" value="<?php echo (isset($objEvenement))?$objEvenement->getTitle():''; ?>" required>
     </div>
-    <div class='displayIfCheckBox'>
-        <label for="changeAffiche">Changer l'image : </label>
-        <input type="checkbox" id="changeAffiche" name="changeAffiche">
+    <?php if (isset($objEvenement)) { ?>
+    <div class='form-check displayIfCheckBox'>
+        <input  class="form-check-input" type="checkbox" id="changeAffiche" name="changeAffiche">
+        <label  class="form-check-label" for="changeAffiche">Changer l'image : </label>
     </div>
-    <div class='displayIfCheckBox'>
-        <label for="affiche">Affiche : </label>
-        <input type="file" id="affiche" name="affiche" <?php echo (isset($objEvenement))?'':'required'?>>
+    <?php } ?>
+    <div class='custom-file displayIfCheckBox'>
+        <label class="custom-file-label" for="affiche">Img : </label>
+        <input class="custom-file-input" type="file" id="affiche" name="affiche" <?php echo (isset($objEvenement))?'':'required'?>>
     </div>
-    <div>
+    <div class = 'form-group'>
         <label for="date">Date : </label>
-        <input type="date" id="date" name="date" value="<?php echo (isset($objEvenement))?$objEvenement->getYearsMonthDay():''; ?>" required>
+        <input class="form-control" type="date" id="date" name="date" value="<?php echo (isset($objEvenement))?$objEvenement->getYearsMonthDay():''; ?>" required>
     </div>
-    <div>
+    <div class = 'form-group'>
         <label for="heure" id="heure">Heure : </label>
-        <input type="time" id="heure" name="heure" value="<?php echo (isset($objEvenement))?$objEvenement->getHour():''; ?>" required>
+        <input class="form-control" type="time" id="heure" name="heure" value="<?php echo (isset($objEvenement))?$objEvenement->getHour():''; ?>" required>
     </div>
-    <div>
+    <div class = 'form-group'>
         <label for="genre" id="genre">Genre : </label>
-        <select id="genre" name="genre" required>
+        <select class="form-control" id="genre" name="genre" required>
             <?php
             foreach($data["arrGenre"] as $arrDetailGenre){
                 $objGenre = new Genre;
@@ -32,10 +34,15 @@
             ?>
         </select>
     </div>
-    <div>
+    <div class = 'form-group'>
         <label for="content">Contenu : </label>
-        <textarea rows="5" cols="30" minlength="10" maxlength="30" id="content" name="content" required><?php echo (isset($objEvenement))?htmlspecialchars($objEvenement->getContentNoNl2br()):''; ?></textarea>
+        <textarea class="form-control" rows="10" id="content" name="content" required><?php echo (isset($objEvenement))?htmlspecialchars($objEvenement->getContentNoNl2br()):''; ?></textarea>
     </div>
-    <input type="submit">
-    <input type="reset">
+    <div class = 'form-group'>
+    <input class="btn btn-primary mb-2" type="submit">
+    <input class="btn btn-primary mb-2" type="reset">
+    <?php if (isset($objEvenement)) { ?>
+    <a class="btn btn-primary mb-2" href="evenement">Retour</a>
+    <?php } ?>
+    </div>
 </form>
