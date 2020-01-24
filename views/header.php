@@ -6,7 +6,8 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
         <title><?php echo ucfirst($page) ?></title>
-		<link rel="stylesheet" href="ressources/styles/styles.css">
+        <link rel="stylesheet" href="ressources/styles/bootstrap.css">
+        <link rel="stylesheet" href="ressources/styles/styles.css">
 		<link rel="icon" type="image/png" href="ressources/images/logo/logo.png" />
     </head>
 	<body>
