@@ -2,7 +2,7 @@
     <p>...</p>
     <div>
         <div class="d-flex">
-            <a title="admin-modifier<?php echo $type?>-<?php echo $obj->getId() ?>" title="'modifier">&#x270E modifier</a>
+            <a href="admin-edit<?php echo $type?>-<?php echo $obj->getId() ?>" title="'modifier">&#x270E modifier</a>
         </div>
         <div class="d-flex">
             <a href='admin-delete<?php echo $type?>-<?php echo $obj->getId() ?>' title="supprimer">&#x2718 supprimer</a>

@@ -1,5 +1,8 @@
 <?php
 include("models/adminManager_class.php"); // on inclut le fichier contenant les fonctions d'appels à la BDD
+include("models/evenementManager_class.php"); // on inclut le fichier contenant les fonctions d'appels à la BDD
+include("models/evenement_class.php"); // inclusion de la classe pour les evenement
+include("models/genre_class.php"); // inclusion de la classe pour les genres
 
 class admin_ctrl extends controller{
 
@@ -37,8 +40,8 @@ class admin_ctrl extends controller{
     }
 
     public function postevenement(){
-        $adminManager = new AdminManager();
-        $adminManager->addEvenement();
+        $objEvenementManager	= new evenementManager;
+        $objEvenementManager->addEvenement();
         header('Location: evenement');
     }
 
@@ -46,5 +49,23 @@ class admin_ctrl extends controller{
         $adminManager = new AdminManager();
         $adminManager->delete('evenements',$_GET['id']);
         header('Location: evenement');
+    }
+
+    public function updateevenement() {
+        $objEvenementManager	= new evenementManager;
+        $objEvenementManager->updateEvenement($_GET['id']);
+        header('Location: evenement');
+    }
+
+    public function editevenement(){
+        $data['page']	= 'Edit Evenement';
+        $this->_contenu = "admin/form_evenement.php";
+        $objEvenementManager	= new evenementManager;
+        $arrEvenement 		= $objEvenementManager->get($_GET['id']);
+        $data["arrGenre"] = $objEvenementManager->getListGenre();
+        $objEvenement = new Evenement;
+        $objEvenement->hydrate($arrEvenement);
+        $data["objEvenement"]= $objEvenement;
+        $this->display($data);
     }
 }

@@ -2,13 +2,16 @@ function $id(target){
     return document.getElementById(target);
 }
 
-if($id('addForm')){
-    $id('addForm').getElementsByTagName('button')[0].onclick = function(e){
-        e.target.style.display = "none";
-        $id('addForm').getElementsByTagName('form')[0].style.display = "block"
-    }
-    $id('addForm').getElementsByTagName('button')[1].onclick = function(e){
-        $id('addForm').getElementsByTagName('button')[0].display = "block";
-        $id('addForm').getElementsByTagName('form')[0].style.display = "none"
+function $class(target){
+    return document.getElementsByClassName(target);
+}
+
+if($class('displayIfCheckBox')){
+    $class('displayIfCheckBox')[0].onclick = function(e){
+        if($class('displayIfCheckBox')[1].style.display === 'block'){
+            $class('displayIfCheckBox')[1].style.display = "none";
+        } else {
+            $class('displayIfCheckBox')[1].style.display = "block";
+        }
     }
 }

@@ -92,6 +92,11 @@
 			return $this->_date;
 		}
 
+        public function getYearsMonthDay() {
+            return explode(' ',$this->_date)[0];
+
+        }
+
         public function getFrenchDate(){
             $dayMonthYears = explode(" ",$this->_date)[0];
             $day = explode("-",$dayMonthYears)[2];
@@ -132,6 +137,10 @@
 		public function getContent(){
 			return nl2br($this->_content);
 		}
+
+        public function getContentNoNl2br(){
+            return ($this->_content);
+        }
 
         public function getShortContent($intLimit = 300){
             return substr(nl2br($this->_content),0,$intLimit) . "..." ;

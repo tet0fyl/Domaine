@@ -338,4 +338,8 @@ a:hover > .card {
     opacity: 0.8;
 }
 
+.displayIfCheckBox:nth-child(n+3){
+    display : none;
+}
+
 /*  ****************  */
