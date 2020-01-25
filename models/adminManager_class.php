@@ -25,8 +25,6 @@ class adminManager extends manager{
             $strQuery = "DELETE FROM `TypeEvenement` WHERE id_evenement = " . $id;
             $this->_db->exec($strQuery);
         }
-
-
         $strQuery = "DELETE FROM " . $table . " WHERE id_" . substr($table,0,strlen($table)-1)  . " = " . $id;
         $this->_db->exec($strQuery);
     }

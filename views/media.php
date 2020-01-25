@@ -1,4 +1,12 @@
-<h2>C'est la page des medias</h2>
+<h2>Media</h2>
+<?php
+if(isset($_SESSION['admin']) && $_SESSION['admin']) { ?>
+    <div id="adminDisplayForm">
+        <button class='btn btn-primary' >Ajouter</button>
+        <?php include("views/admin/form_media.php"); ?>
+    </div>
+<?php }
+?>
 
 <?php
 	foreach($data["arrMedia"] as $dataMedia){

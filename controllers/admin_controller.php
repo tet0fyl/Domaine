@@ -6,6 +6,8 @@ include("models/actualiteManager_class.php"); // inclusion de la classe pour les
 include("models/actualite_class.php"); // inclusion de la classe pour les actus
 include("models/presse_class.php"); // inclusion de la classe pour les presse
 include("models/presseManager_class.php"); // inclusion de la classe pour les presse
+include("models/media_class.php"); // inclusion de la classe pour les media
+include("models/mediaManager_class.php"); // inclusion de la classe pour les media
 include("models/genre_class.php"); // inclusion de la classe pour les genres
 
 class admin_ctrl extends controller{
@@ -134,5 +136,36 @@ class admin_ctrl extends controller{
         $objPresseManager	= new presseManager;
         $objPresseManager->updatePresse($_GET['id']);
         header('Location: presse');
+    }
+
+    //////////
+    // MEDIAS //
+    public function postmedia(){
+        $objMediaManager	= new mediaManager();
+        $objMediaManager->addMedia();
+        header('Location: media');
+    }
+
+    public function deletemedia(){
+        $adminManager = new AdminManager();
+        $adminManager->delete('Medias',$_GET['id']);
+        header('Location: media');
+    }
+
+    public function editmedia () {
+        $data['page']	= 'Edit Presse';
+        $this->_contenu = "admin/form_media.php";
+        $objMediaManager	= new mediaManager();
+        $arrMedia		= $objMediaManager->get($_GET['id']);
+        $objMedia = new Media;
+        $objMedia->hydrate($arrMedia);
+        $data["objMedia"]= $objMedia;
+        $this->display($data);
+    }
+
+    public function updatemedia() {
+        $objMediaManager	= new mediaManager;
+        $objMediaManager->updateMedia($_GET['id']);
+        header('Location: media');
     }
 }
