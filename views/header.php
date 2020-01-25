@@ -34,7 +34,7 @@
                         <li class="nav-item <?php echo (isset($page) && $page=='media')?"='active":""; ?>" >
                             <a class="nav-link" href="media" title="Presse">Media</a>
                         </li>
-                        <li class="nav-item <?php echo (isset($page) && $page=='infos pratiques')?"active":""; ?>" >
+                        <li class="nav-item <?php echo (isset($page) && $page=='infos')?"active":""; ?>" >
                             <a class="nav-link" href="contact" title="Infos Pratiques">Infos Pratiques</a>
                         </li>
                         <li class="nav-item">
