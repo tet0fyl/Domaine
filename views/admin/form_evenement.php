@@ -11,7 +11,10 @@
     <?php } ?>
     <div class='custom-file displayIfCheckBox'>
         <label class="custom-file-label" for="affiche">Img : </label>
-        <input class="custom-file-input" type="file" id="affiche" name="affiche" <?php echo (isset($objEvenement))?'':'required'?>>
+        <input class="custom-file-input" type="file" id="imgInp" name="affiche" <?php echo (isset($objEvenement))?'':'required'?>>
+    </div>
+    <div class="form-group mt-2">
+        <img class="img-fluid shadow" width="200px" id='renderImg' src="#" alt="">
     </div>
     <div class = 'form-group'>
         <label for="date">Date : </label>
