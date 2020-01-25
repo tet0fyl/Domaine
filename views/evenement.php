@@ -26,7 +26,7 @@ if(isset($_SESSION['admin']) && $_SESSION['admin']) { ?>
 
 <?php
 if(count($data["arrFuturEvenement"]) == 0 && count($data["arrPastEvenement"]) == 0){?>
-    <p>Pas d'évenement dans ce genre musical pour le moment !</p>
+    <h4 class="p-5">Pas d'évenement dans ce genre musical pour le moment !</h4>
 <?php } else {?>
 
     <?php if(count($data["arrFuturEvenement"]) != 0) { ?>
