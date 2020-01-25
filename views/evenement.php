@@ -9,8 +9,8 @@ if(isset($_SESSION['admin']) && $_SESSION['admin']) { ?>
 <?php }
 ?>
 
-<h3>Filtre :</h3>
-<div class="d-flex">
+<h3 class="mt-2">Filtre :</h3>
+<div class="d-flex flex-wrap justify-content-around">
 <?php
     foreach($data["arrGenre"] as $arrDetailGenre){
         $objGenre = new Genre;
@@ -31,7 +31,7 @@ if(count($data["arrFuturEvenement"]) == 0 && count($data["arrPastEvenement"]) ==
 
     <?php if(count($data["arrFuturEvenement"]) != 0) { ?>
 
-        <h2>Prochainement</h2>
+        <h3 class="mt-2">Prochainement</h3>
         <hr>
 
         <?php
@@ -46,7 +46,7 @@ if(count($data["arrFuturEvenement"]) == 0 && count($data["arrPastEvenement"]) ==
 
 <?php
 if(count($data["arrPastEvenement"]) != 0){?>
-    <h2>Passé</h2>
+    <h3 class="mt-2">Passé</h3>
     <hr>
     <div class="past-event">
     <?php

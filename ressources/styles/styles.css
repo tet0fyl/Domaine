@@ -22,301 +22,14 @@
     font-weight: 800;
 }
 
+main > a {
+    text-decoration: none !important;
+}
 
 body{
     margin: 0;
     font-family: VFutura;
     font-weight: 100;
-}
-
-/*
-a{
-    color: inherit;
-    text-decoration: none;
-}
-
-header{
-    background-color: rgba(135, 143, 146, 0.2);
-    border-bottom: solid 1px grey;
-}
-
-/*
-nav ul li a{
-    display: block;
-    font-size: 25px;
-    text-transform: uppercase;
-    text-decoration: none;
-    text-align: center;
-    color: black;
-}
-nav ul li {
-    display: inline-block;
-    padding-left: 80px;
-}
-nav{
-    width: 100%;
-    height: 50px;
-    word-spacing: 15px;
-    padding-top: 10px;
-    padding-bottom: 20px;
-}
-
-footer{
-    width: 100%;
-    height: 150px;
-    background-color: rgba(135, 143, 146, 0.2);
-    border-top: solid 1px grey;
-    padding-top: 20px;
-    font-size: 20px;
-}
-
-#conteneur{
-    display: flex;
-}
-.logo-footer{
-    padding-left: 250px;
-}
-.coordonnees{
-    padding-left: 220px;
-}
-.newsletter{
-    padding-left: 220px;
-    padding-top: 15px;
-}
-.newsletter input{
-    width: 180px;
-    height: 20px;
-}
-.informations{
-    padding-left: 220px;
-}
-.informations ul{
-    list-style: none;
-}
-
-/*  RAJOUTER PAR THEO
-
-.d-flex{
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.text-center{
-    text-align: center;
-}
-/*  ****************
-
-
-@media screen and (max-width: 1500px){
-    /*nav ul li{
-    padding-left: 50px;
-    }
-    nav ul li a{
-        font-size: 20px;
-    }
-    .logo-footer{
-        padding-left: 150px;
-    }
-    .coordonnees{
-        padding-left: 100px;
-    }
-    .newsletter{
-        padding-left: 100px;
-        padding-top: 10px;
-    }
-}
-
-.Slider{
-    /*width: 80%;
-    margin: auto;
-    overflow: hidden;
-    max-width: 1000px;
-    position: relative;
-    margin: auto;
-}
-
-.SliderPanel{
-    position: relative;
-    display: flex;
-    width: 400%;
-    flex-wrap: nowrap;
-    animation: slide linear 15s alternate infinite;
-}
-
-.SliderMedia{
-    width: 100%;
-    position: relative;
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
-    animation-duration: 1.5s;
-
-}
-
-
-.left{
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-.left:hover, .right:hover {
-    background-color: rgba(0,0,0,0.8);
-}
-
-.Caption{
-    color: #f2f2f2;
-    font-size: 15px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 8px;
-    width: 100%;
-    text-align: center;
-}
-
-.dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
-
-.dot:hover {
-    background-color: #717171;
-}
-
-.SliderPosition{
-    text-align: center;
-}
-
-@keyframes slide {
-    0%{
-        left: 0px;
-    }
-    100%{
-        left: -300%;
-    }
-}
-Calendrier
-
-.left {
-    margin-left: 20px;
-    margin-top: 10px;
-    float: left;
-    width: 60px;
-}
-
-.right {
-    margin-top: 20px;
-    float: left;
-    width: 400px;
-}
-.calendrier{
-    margin-left: 100px;
-    display:inline-block;
-    position:relative;
-    cursor:pointer;
-    background:#fff;
-    font-weight:400;
-    color:#333!important;
-    font-size:15px;
-    line-height:100%;
-    -webkit-box-shadow:0 0 0 0.5px rgba(50,50,93,.17), 0 2px 5px 0 rgba(50,50,93,.1), 0 1px 1.5px 0 rgba(0,0,0,.07), 0 1px 2px 0 rgba(0,0,0,.08), 0 0 0 0 transparent!important;
-    -moz-box-shadow:0 0 0 0.5px rgba(50,50,93,.17), 0 2px 5px 0 rgba(50,50,93,.1), 0 1px 1.5px 0 rgba(0,0,0,.07), 0 1px 2px 0 rgba(0,0,0,.08), 0 0 0 0 transparent!important;
-    box-shadow:0 0 0 0.5px rgba(50,50,93,.17), 0 2px 5px 0 rgba(50,50,93,.1), 0 1px 1.5px 0 rgba(0,0,0,.07), 0 1px 2px 0 rgba(0,0,0,.08), 0 0 0 0 transparent!important;
-    -webkit-border-radius:4px;
-    border-radius:4px;
-}
-.calendrier-selected{
-    background-color: #f4f4f4;
-}
-.calendrier:hover{
-    background-color: #f8f8f8;
-}
-.date{
-    width:50px;
-    height:60px;
-    float:left;
-    position:relative;
-}
-.evenement{
-    height:60px;
-    float:left;
-    position:relative;
-    padding:0px 15px 0px 0px;
-}
-.mois{
-    display:block;
-    text-align:center;
-    padding:10px 0px 0px 0px;
-    font-size:10px;
-    color:#bf5549;
-
-
-    font-weight:bold;
-    line-height:110%;
-    text-transform:uppercase;
-}
-.jour{
-    display:block;
-    text-align:center;
-    padding:0px 0px 8px 0px;
-    font-size:28px;
-    font-weight:bold;
-    color:#333;
-    line-height:100%;
-}
-.titre{
-    height:15px;
-    display:block;
-    overflow:hidden;
-    margin-bottom:0px;
-    font-size:13px;
-    line-height:110%;
-    color:#333;
-    text-transform:uppercase;
-}
-.heure{
-    height:28px;
-    display:block;
-    overflow:hidden;
-}*/
-/*  RAJOUTER PAR THEO   */
-.card.genre{
-    width: 10%;
-    text-align: center;
-}
-
-.card.genre{
-    width: 10%;
-    text-align: center;
-}
-
-.card.genre.selected{
-    background: #717171;
-    color: #f2f2f2;
-    box-shadow: inherit;
-}
-
-.card {
-    position: relative;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    margin: 10px;
-    margin-bottom: 20px;
-    padding: 10px;
-    border-radius: 10px ;
-    text-decoration: none;
-}
-
-.card p {
-    padding-left: 10px;
-}
-
-a:hover > .card {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
 .admin-option{
@@ -410,5 +123,22 @@ a:hover > .card {
     color:#333!important;
 }
 
+.calendrierTile:hover {
+    opacity: 0.5;
+}
+
+.genre:hover{
+    color: white;
+    background: -webkit-linear-gradient(156deg, #000000 -50%, #C13039 12%,#C13039 95%, #000000 120%) !important;
+    background: -moz-linear-gradient(156deg, #000000 -50%, #C13039 12%,#C13039 95%, #000000 120%) !important;
+    background: -o-linear-gradient(156deg, #000000 -50%, #C13039 12%,#C13039 95%, #000000 120%) !important;
+}
+
+.genreSelected{
+    color: white;
+    background: -webkit-linear-gradient(156deg, #000000 -50%, #C13039 12%,#C13039 95%, #000000 120%) !important;
+    background: -moz-linear-gradient(156deg, #000000 -50%, #C13039 12%,#C13039 95%, #000000 120%) !important;
+    background: -o-linear-gradient(156deg, #000000 -50%, #C13039 12%,#C13039 95%, #000000 120%) !important;
+}
 
 /*  ****************  */

@@ -1,7 +1,8 @@
 		</main>
         <footer class="container-fluid d-flex justify-content-around bg-light flex-wrap pt-3 pb-3">
-
+                <span style="color: white">
                 <img src="ressources/images/logo/logo.png" width="120" height="120">
+                    </span>
             </div>
 
             <div>

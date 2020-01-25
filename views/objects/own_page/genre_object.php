@@ -1,3 +1,3 @@
-<a class="card genre <?php echo($objGenre->getSelected())?'selected':' ';?>" href="<?php echo(!$objGenre->getSelected())?"evenement-genre-". $objGenre->getId():"evenement";?>">
+<a class="col-1 text-center shadow rounded p-2 genre <?php echo($objGenre->getSelected())?'genreSelected':' ';?>" href="<?php echo(!$objGenre->getSelected())?"evenement-genre-". $objGenre->getId():"evenement";?>">
     <?php echo $objGenre->getLibelle(); ?>
 </a>
