@@ -363,19 +363,36 @@ a:hover > .card {
     display: none;
 }
 
-/* ******** */
+/* *** BOOSTRAP REECRITURE ***** */
 .carousel-item {
-    height: 400px;
+    height: 300px;
 }
 
-.navbar-light {
+.bg-light {
+    background: -webkit-linear-gradient(156deg, #000000 -50%, #C13039 12%,#C13039 95%, #000000 120%) !important;
+    background: -moz-linear-gradient(156deg, #000000 -50%, #C13039 12%,#C13039 95%, #000000 120%) !important;
+    background: -o-linear-gradient(156deg, #000000 -50%, #C13039 12%,#C13039 95%, #000000 120%) !important;
 }
 
-.bg-light > a:hover {
- color :red;
+.bg-light a .active {
+    color: white !important;
+    opacity: 0.5 ;
 }
 
-.bg-light{
-
+.navbar a {
+    color: white !important;
+    opacity: 0.5 ;
+    font-size: 1.5em;
 }
+
+.navbar a:hover {
+    opacity: 1 ;
+}
+
+.navbar .active a{
+    opacity: 1 ;
+}
+
+
+
 /*  ****************  */
