@@ -2,6 +2,8 @@
 include("models/adminManager_class.php"); // on inclut le fichier contenant les fonctions d'appels à la BDD
 include("models/evenementManager_class.php"); // on inclut le fichier contenant les fonctions d'appels à la BDD
 include("models/evenement_class.php"); // inclusion de la classe pour les evenement
+include("models/actualiteManager_class.php"); // inclusion de la classe pour les actus
+include("models/actualite_class.php"); // inclusion de la classe pour les actus
 include("models/genre_class.php"); // inclusion de la classe pour les genres
 
 class admin_ctrl extends controller{
@@ -39,6 +41,7 @@ class admin_ctrl extends controller{
         header('Location: home');
     }
 
+     // EVENEMENT //
     public function postevenement(){
         $objEvenementManager	= new evenementManager;
         $objEvenementManager->addEvenement();
@@ -47,7 +50,7 @@ class admin_ctrl extends controller{
 
     public function deleteevenement(){
         $adminManager = new AdminManager();
-        $adminManager->delete('evenements',$_GET['id']);
+        $adminManager->delete('Evenements',$_GET['id']);
         header('Location: evenement');
     }
 
@@ -67,5 +70,36 @@ class admin_ctrl extends controller{
         $objEvenement->hydrate($arrEvenement);
         $data["objEvenement"]= $objEvenement;
         $this->display($data);
+    }
+
+    //////////
+    // ACTU //
+    public function postactualite(){
+        $objActualiteManager	= new actualiteManager();
+        $objActualiteManager->addActualite();
+        header('Location: actualite');
+    }
+
+    public function deleteactualite(){
+        $adminManager = new AdminManager();
+        $adminManager->delete('Actualites',$_GET['id']);
+        header('Location: actualite');
+    }
+
+    public function editactualite () {
+        $data['page']	= 'Edit Actu';
+        $this->_contenu = "admin/form_actualite.php";
+        $objActualiteManager	= new actualiteManager;
+        $arrActualite 		= $objActualiteManager->get($_GET['id']);
+        $objActualite = new Actualite;
+        $objActualite->hydrate($arrActualite);
+        $data["objActualite"]= $objActualite;
+        $this->display($data);
+    }
+
+    public function updateactualite() {
+        $objActualiteManager	= new actualiteManager;
+        $objActualiteManager->updateActualite($_GET['id']);
+        header('Location: actualite');
     }
 }

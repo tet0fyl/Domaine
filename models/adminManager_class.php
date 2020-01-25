@@ -21,7 +21,7 @@ class adminManager extends manager{
     }
 
     public function delete($table,$id){
-        if($table=='evenements'){
+        if($table=='Evenements'){
             $strQuery = "DELETE FROM `TypeEvenement` WHERE id_evenement = " . $id;
             $this->_db->exec($strQuery);
         }

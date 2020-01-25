@@ -83,11 +83,15 @@
             return explode(" ",$this->_date)[1];
         }
 
-		public function getContent(){
-			return nl2br($this->_content);
-		}
+        public function getContent($limit=null){
+            if($limit){
+                return substr($this->_content,0,$limit) . "..." ;
+            }else {
+                return nl2br($this->_content) ;
+            }
+            }
 
-        public function getShortContent(){
-            return substr($this->_content,0,300) . "..." ;
+        public function getContentNoNl2br(){
+            return ($this->_content);
         }
 	}
