@@ -46,9 +46,13 @@
             return	$this->_id;
         }
 
-		public function getTitle(){
-			return strtoupper($this->_title);
-		}	
+        public function getTitle($limit=null){
+            if($limit){
+                return substr($this->_title,0,$limit) . "..." ;
+            }else {
+                return $this->_title ;
+            }
+        }
 
 		public function getImg(){
 			return	$this->_img;

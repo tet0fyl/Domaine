@@ -1,4 +1,4 @@
-<form method="post" action="<?php echo (isset($objActualite))?'admin-updateactualite-' . $objActualite->getId():'admin-postactualite'; ?>" enctype="multipart/form-data">
+<form class='mt-2' method="post" action="<?php echo (isset($objActualite))?'admin-updateactualite-' . $objActualite->getId():'admin-postactualite'; ?>" enctype="multipart/form-data">
     <div class = 'form-group'>
         <label for="titre">Titre : </label>
         <input class="form-control" type="text" id="titre" name="titre" value="<?php echo (isset($objActualite))?$objActualite->getTitle():''; ?>" required>

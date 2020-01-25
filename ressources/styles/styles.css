@@ -29,6 +29,7 @@ body{
     font-weight: 100;
 }
 
+/*
 a{
     color: inherit;
     text-decoration: none;
@@ -68,7 +69,7 @@ footer{
     padding-top: 20px;
     font-size: 20px;
 }
-*/
+
 #conteneur{
     display: flex;
 }
@@ -93,7 +94,7 @@ footer{
     list-style: none;
 }
 
-/*  RAJOUTER PAR THEO   */
+/*  RAJOUTER PAR THEO
 
 .d-flex{
     display: flex;
@@ -103,7 +104,7 @@ footer{
 .text-center{
     text-align: center;
 }
-/*  ****************  */
+/*  ****************
 
 
 @media screen and (max-width: 1500px){
@@ -112,7 +113,7 @@ footer{
     }
     nav ul li a{
         font-size: 20px;
-    }*/
+    }
     .logo-footer{
         padding-left: 150px;
     }
@@ -128,7 +129,7 @@ footer{
 .Slider{
     /*width: 80%;
     margin: auto;
-    overflow: hidden;*/
+    overflow: hidden;
     max-width: 1000px;
     position: relative;
     margin: auto;
@@ -198,7 +199,7 @@ footer{
         left: -300%;
     }
 }
-/*Calendrier*/
+Calendrier
 
 .left {
     margin-left: 20px;
@@ -252,6 +253,8 @@ footer{
     padding:10px 0px 0px 0px;
     font-size:10px;
     color:#bf5549;
+
+
     font-weight:bold;
     line-height:110%;
     text-transform:uppercase;
@@ -279,7 +282,7 @@ footer{
     height:28px;
     display:block;
     overflow:hidden;
-}
+}*/
 /*  RAJOUTER PAR THEO   */
 .card.genre{
     width: 10%;
@@ -399,6 +402,13 @@ a:hover > .card {
     opacity: 1 ;
 }
 
+.txt-r {
+    color:#bf5549!important;
+}
+
+.txt-b {
+    color:#333!important;
+}
 
 
 /*  ****************  */

@@ -36,9 +36,9 @@ foreach($data["arrMedia"] as $dataMedia){
 </div>
     <!-- /////////  ///////// -->
 
+    <!-- ///////// CALENDAR ///////// -->
 
-    <div class="calendrier">
-<div class="container">
+<div class="shadow mt-3 mb-2 py-1 col-md-6 col-sm-12">
 <?php
 	foreach($data["arrEvenement"] as $dataEvent){
 		$objEvenement = new Evenement;
@@ -46,7 +46,6 @@ foreach($data["arrMedia"] as $dataMedia){
 		include("views/objects/home/evenement_object.php");
 	}
 ?>
-</div>
 </div>
 
 <h3>ACTU :</h3>

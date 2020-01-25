@@ -1,4 +1,4 @@
-<form method="post" action="<?php echo (isset($objPresse))?'admin-updatepresse-' . $objPresse->getId():'admin-postpresse'; ?>" enctype="multipart/form-data">
+<form class='mt-2' method="post" action="<?php echo (isset($objPresse))?'admin-updatepresse-' . $objPresse->getId():'admin-postpresse'; ?>" enctype="multipart/form-data">
     <div class='custom-file'>
         <input class="custom-file-input" type="file" id="doc" name="doc" required>
         <label class="custom-file-label" for="doc">Doc : </label>

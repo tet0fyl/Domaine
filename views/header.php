@@ -52,6 +52,6 @@
                 </div>
             </nav>
 		</header>
-		<main class="container mt-4">
+		<main class="container shadow mt-2 pt-2">
 		
 		

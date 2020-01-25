@@ -1,4 +1,4 @@
-<form method="post" action="<?php echo (isset($objMedia))?'admin-updatemedia-' . $objMedia->getId():'admin-postmedia'; ?>" enctype="multipart/form-data">
+<form class='mt-2' method="post" action="<?php echo (isset($objMedia))?'admin-updatemedia-' . $objMedia->getId():'admin-postmedia'; ?>" enctype="multipart/form-data">
     <div class='custom-file mt-2'>
         <input class="custom-file-input" type="file" id="imgInp" name="image" required>
         <label class="custom-file-label" for="image">Img : </label>
