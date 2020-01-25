@@ -10,7 +10,7 @@ if(isset($_SESSION['admin']) && $_SESSION['admin']) { ?>
 ?>
 
 <h3 class="mt-2">Filtre :</h3>
-<div class="d-flex flex-wrap justify-content-around">
+<div class="d-flex flex-wrap justify-content-around align-content-between">
 <?php
     foreach($data["arrGenre"] as $arrDetailGenre){
         $objGenre = new Genre;
