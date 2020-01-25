@@ -28,10 +28,9 @@
                         <?php
                     }
                     ?>
-
                 </ul>
 			</nav>
 		</header>
-		<main>
+		<main class="container">
 		
 		
