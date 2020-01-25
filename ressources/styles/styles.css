@@ -317,6 +317,7 @@ a:hover > .card {
 
 .admin-option{
     position: relative;
+    flex-direction: column;
 }
 
 .admin-option:hover > div{
@@ -326,7 +327,7 @@ a:hover > .card {
 .admin-option > div{
     display: none;
     position: absolute;
-    right: 0px;
+    right: 0px !important;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     border-radius: 10px;
 }

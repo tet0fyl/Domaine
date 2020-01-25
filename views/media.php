@@ -8,6 +8,7 @@ if(isset($_SESSION['admin']) && $_SESSION['admin']) { ?>
 <?php }
 ?>
 
+<div class="d-flex flex-wrap justify-content-around align-items-center mb-5">
 <?php
 	foreach($data["arrMedia"] as $dataMedia){
 		$objMedia = new Media;
@@ -15,3 +16,4 @@ if(isset($_SESSION['admin']) && $_SESSION['admin']) { ?>
 		include("views/objects/own_page/media_object.php");
 	}	
 ?>
+</div>
