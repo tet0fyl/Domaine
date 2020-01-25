@@ -1,3 +1,6 @@
+<?php if (isset($objMedia)){ ?>
+    <h2>Mise à jour Media</h2>
+<?php } ?>
 <form class='mt-2' method="post" action="<?php echo (isset($objMedia))?'admin-updatemedia-' . $objMedia->getId():'admin-postmedia'; ?>" enctype="multipart/form-data">
     <div class='custom-file mt-2'>
         <input class="custom-file-input" type="file" id="imgInp" name="image" required>

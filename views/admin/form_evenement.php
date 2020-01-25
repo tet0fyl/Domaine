@@ -1,3 +1,6 @@
+<?php if (isset($objEvenement)){ ?>
+    <h2>Mise à jour Evenements</h2>
+<?php } ?>
 <form class='mt-2' method="post" action="<?php echo (isset($objEvenement))?'admin-updateevenement-' . $objEvenement->getId():'admin-postevenement'; ?>" enctype="multipart/form-data">
     <div class = 'form-group'>
         <label for="titre">Titre : </label>

@@ -1,3 +1,6 @@
+<?php if (isset($objPresse)){ ?>
+    <h2>Mise à jour Presse</h2>
+<?php } ?>
 <form class='mt-2' method="post" action="<?php echo (isset($objPresse))?'admin-updatepresse-' . $objPresse->getId():'admin-postpresse'; ?>" enctype="multipart/form-data">
     <div class='custom-file'>
         <input class="custom-file-input" type="file" id="doc" name="doc" required>

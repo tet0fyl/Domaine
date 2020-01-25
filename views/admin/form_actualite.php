@@ -1,3 +1,6 @@
+<?php if (isset($objActualite)){ ?>
+    <h2>Mise à jour Actualités</h2>
+<?php } ?>
 <form class='mt-2' method="post" action="<?php echo (isset($objActualite))?'admin-updateactualite-' . $objActualite->getId():'admin-postactualite'; ?>" enctype="multipart/form-data">
     <div class = 'form-group'>
         <label for="titre">Titre : </label>
