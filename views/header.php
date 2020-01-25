@@ -28,10 +28,10 @@
                         <li class="nav-item <?php echo (isset($page) && $page=='actualite')?"active":""; ?>" >
                             <a class="nav-link" href="actualite" title="Actualités">Actualités</a>
                         </li>
-                        <li class="nav-item <?php echo (isset($page) && $page=='presse')?"='active":""; ?>" >
+                        <li class="nav-item <?php echo (isset($page) && $page=='presse')?"active":""; ?>" >
                             <a class="nav-link" href="presse" title="Presse">Presse</a>
                         </li>
-                        <li class="nav-item <?php echo (isset($page) && $page=='media')?"='active":""; ?>" >
+                        <li class="nav-item <?php echo (isset($page) && $page=='media')?"active":""; ?>" >
                             <a class="nav-link" href="media" title="Presse">Media</a>
                         </li>
                         <li class="nav-item <?php echo (isset($page) && $page=='infos')?"active":""; ?>" >
