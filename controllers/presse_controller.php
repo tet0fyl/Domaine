@@ -12,11 +12,9 @@
 			$data['page']	= 'presse';
 			$objPresseManager	= new presseManager;
 			$arrPresse		= $objPresseManager->getList();
-			
 			$data["arrPresse"]= $arrPresse;
-			$this->_contenu = "presse.php";
+            $this->_contenu = "presse.php";
 			$this->display($data);			
 		}
-	
 		
 	}

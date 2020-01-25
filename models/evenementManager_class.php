@@ -106,4 +106,23 @@ function imgUpload($postName,$path){
         }
     }
 }
+
+function docUpload($postName,$path){
+// Testons si le fichier a bien été envoyé et s'il n'y a pas d'erreur
+    if (isset($_FILES[$postName]) AND $_FILES[$postName]['error'] == 0) {
+        // Testons si le fichier n'est pas trop gros
+        if ($_FILES[$postName]['size'] <= 1000000) {
+            // Testons si l'extension est autorisée
+            $infosfichier = pathinfo($_FILES[$postName]['name']);
+            $extension_upload = $infosfichier['extension'];
+            $extensions_autorisees = array('pdf');
+            if (in_array($extension_upload, $extensions_autorisees)) {
+                // On peut valider le fichier et le stocker définitivement
+                $fileName = $_FILES[$postName]['name'];
+                move_uploaded_file($_FILES[$postName]['tmp_name'], $path . $fileName);
+                return $fileName;
+            }
+        }
+    }
+}
 	

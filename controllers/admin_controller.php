@@ -4,6 +4,8 @@ include("models/evenementManager_class.php"); // on inclut le fichier contenant 
 include("models/evenement_class.php"); // inclusion de la classe pour les evenement
 include("models/actualiteManager_class.php"); // inclusion de la classe pour les actus
 include("models/actualite_class.php"); // inclusion de la classe pour les actus
+include("models/presse_class.php"); // inclusion de la classe pour les presse
+include("models/presseManager_class.php"); // inclusion de la classe pour les presse
 include("models/genre_class.php"); // inclusion de la classe pour les genres
 
 class admin_ctrl extends controller{
@@ -101,5 +103,36 @@ class admin_ctrl extends controller{
         $objActualiteManager	= new actualiteManager;
         $objActualiteManager->updateActualite($_GET['id']);
         header('Location: actualite');
+    }
+
+    //////////
+    // PRESSE //
+    public function postpresse(){
+        $objPresseManager	= new presseManager();
+        $objPresseManager->addPresse();
+        header('Location: presse');
+    }
+
+    public function deletepresse(){
+        $adminManager = new AdminManager();
+        $adminManager->delete('Presses',$_GET['id']);
+        header('Location: presse');
+    }
+
+    public function editpresse () {
+        $data['page']	= 'Edit Presse';
+        $this->_contenu = "admin/form_presse.php";
+        $objPresseManager	= new presseManager();
+        $arrPresse		= $objPresseManager->get($_GET['id']);
+        $objPresse = new Presse;
+        $objPresse->hydrate($arrPresse);
+        $data["objPresse"]= $objPresse;
+        $this->display($data);
+    }
+
+    public function updatepresse() {
+        $objPresseManager	= new presseManager;
+        $objPresseManager->updatePresse($_GET['id']);
+        header('Location: presse');
     }
 }
