@@ -103,6 +103,10 @@ body{
     opacity: 0.5 ;
 }
 
+.navbar {
+    min-height: 150px;
+}
+
 .navbar a {
     color: white !important;
     opacity: 0.5 ;

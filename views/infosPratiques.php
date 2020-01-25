@@ -18,19 +18,21 @@
 
 
 <div class="contact">
-        <form id="formulaire" name="formulaire" action="infosPratiques.php" method="POST">
+        <form class="col-12 col-md-6" id="formulaire" name="formulaire" action="infosPratiques.php" method="POST">
+            <div class="form-group">
                         <label for="name">Votre nom :</label><br>
-                        <input type="text" required id="name" name="name"><br>
-
-                        <label for="email">Votre e-mail :</label><br>
-                        <input type="text" required id="email" name="email"><br>
-
+                        <input class="form-control" type="text" required id="name" name="name"><br>
+            </div>
+            <div class="form-group">
+            <label for="email">Votre e-mail :</label><br>
+                        <input class="form-control" type="text" required id="email" name="email"><br>
+            </div>
+            <div class="form-group">
                         <label for="message">Votre message :</label><br>
-                        <textarea type="text" required id="message" name="message"></textarea><br>
+                        <textarea class="form-control" type="text" rows="3" required id="message" name="message"></textarea><br>
+            </div>
+            <a class="btn bg-light rounded text-white" onclick="document.getElementById('formulaire').submit();">Envoyer</a>
         </form>
-            <a class="bouton" onclick="document.getElementById('formulaire').submit();">Envoyer</a>
-        </div>
-    </div>
 </div>
 
 <?php

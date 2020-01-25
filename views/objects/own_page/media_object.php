@@ -1,4 +1,4 @@
-<article class="d-flex flex-column">
+<article class="d-flex flex-column m-3">
     <?php
     if(isset($_SESSION['admin']) && $_SESSION['admin']) {
         adminOption('media',$objMedia);
