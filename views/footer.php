@@ -1,4 +1,5 @@
-		<footer>
+		</main>
+        <footer class="container-fluid">
             <div id="conteneur">
 
             <div class="logo-footer">

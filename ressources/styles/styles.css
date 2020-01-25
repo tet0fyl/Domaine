@@ -363,7 +363,19 @@ a:hover > .card {
     display: none;
 }
 
+/* ******** */
 .carousel-item {
     height: 400px;
+}
+
+.navbar-light {
+}
+
+.bg-light > a:hover {
+ color :red;
+}
+
+.bg-light{
+
 }
 /*  ****************  */
