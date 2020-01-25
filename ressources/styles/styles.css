@@ -59,7 +59,9 @@ body{
 }
 
 .admin-option > div > div:hover{
-    background: #717171 ;
+    background: -webkit-linear-gradient(156deg, #000000 -50%, #C13039 12%,#C13039 95%, #000000 120%) !important;
+    background: -moz-linear-gradient(156deg, #000000 -50%, #C13039 12%,#C13039 95%, #000000 120%) !important;
+    background: -o-linear-gradient(156deg, #000000 -50%, #C13039 12%,#C13039 95%, #000000 120%) !important;
     color: #f2f2f2;
     border-radius: 0px;
 }

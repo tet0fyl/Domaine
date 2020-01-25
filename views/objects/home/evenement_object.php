@@ -1,8 +1,3 @@
-<!--<article>
-     <h3><?php echo $objEvenement->getTitle(); ?></h3>
-        <img alt="<?php echo $objEvenement->getTitle(); ?>"
-             width="500" src="<?php echo $urlAfficheEvent . $objEvenement->getImg(); ?>">
-    </a> -->
 <a href="evenement-<?php echo $objEvenement->getId(); ?>">
 <article class="d-flex txt-b my-3 calendrierTile">
     <div class="d-flex flex-column text-center font-weight-bold mx-2">
