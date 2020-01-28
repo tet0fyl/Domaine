@@ -16,8 +16,10 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse m-auto" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto">
+                            <a class="nav-link d-lg-none d-inline justify-self-start" href="home" title="Page d'accueil">
+                            <img src="ressources/images/logo/Logo-White.svg" width="100" height="100"></a>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav d-flex justify-content-center align-items-center w-100">
                         <li class="nav-item <?php echo (isset($page) && $page=='home')?"active":""; ?>" >
                             <a class="nav-link" href="home" title="Page d'accueil">Accueil</a>
                         </li>
@@ -29,6 +31,10 @@
                         </li>
                         <li class="nav-item <?php echo (isset($page) && $page=='presse')?"active":""; ?>" >
                             <a class="nav-link" href="presse" title="Presse">Presse</a>
+                        </li>
+                        <li class="nav-item <?php echo (isset($page) && $page=='home')?"active":""; ?>" >
+                            <a class="nav-link d-lg-inline d-none" href="home" title="Page d'accueil">
+                            <img src="ressources/images/logo/Logo-White.svg" width="100" height="100"></a>
                         </li>
                         <li class="nav-item <?php echo (isset($page) && $page=='media')?"active":""; ?>" >
                             <a class="nav-link" href="media" title="Presse">Media</a>

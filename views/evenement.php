@@ -31,7 +31,7 @@ if(count($data["arrFuturEvenement"]) == 0 && count($data["arrPastEvenement"]) ==
 
     <?php if(count($data["arrFuturEvenement"]) != 0) { ?>
 
-        <h3 class="mt-2">Prochainement</h3>
+        <h3 class="mt-2">Evènement(s) à venir</h3>
         <hr>
 
         <?php
@@ -46,7 +46,7 @@ if(count($data["arrFuturEvenement"]) == 0 && count($data["arrPastEvenement"]) ==
 
 <?php
 if(count($data["arrPastEvenement"]) != 0){?>
-    <h3 class="mt-2">Passé</h3>
+    <h3 class="mt-2">Evènement(s) passé</h3>
     <hr>
     <div class="past-event">
     <?php
