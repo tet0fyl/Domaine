@@ -57,6 +57,6 @@
                 </div>
             </nav>
 		</header>
-		<main class="container shadow mt-2 pt-3 mb-2 pb-3">
+		<main class="container shadow mt-2 pt-3 mb-2 pb-3 rounded" style="background-color: white">
 		
 		

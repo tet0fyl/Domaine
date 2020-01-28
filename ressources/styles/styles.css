@@ -30,6 +30,9 @@ body{
     margin: 0;
     font-family: VFutura;
     font-weight: 100;
+    background: -webkit-linear-gradient(156deg, #000000 -50%, #adadad 12%,#adadad 95%, #000000 120%) !important;
+    background: -moz-linear-gradient(156deg, #000000 -50%, #adadad 12%,#adadad 95%, #000000 120%) !important;
+    background: -o-linear-gradient(156deg, #000000 -50%, #adadad 12%,#adadad 95%, #000000 120%) !important;
 }
 
 textarea{
