@@ -1,20 +1,14 @@
 <h2>Infos Pratiques</h2>
 
-<p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression.
-    Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500,
-    quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte.
-    Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié.
-    Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum,
-    et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.</p>
+<p>Le Domaine est un club privé dédié à l'organisation de concerts et d'autres événements liés à toute forme d'art. Point de chute de l'association Six Six il a déjà vu jouer entre autres : Coilguns, Gull, Hawks, Mars Red Sky, Pauwels..</p>
 
     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10757.47069547501!2d7.2350291!3d47.6189838!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe4f1774fcfc1f11!2sLe%20Domaine!5e0!3m2!1sfr!2sfr!4v1575674035996!5m2!1sfr!2sfr" width="400" height="250" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
 
-<p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression.
-    Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500,
-    quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte.
-    Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié.
-    Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum,
-    et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.</p>
+<p>27 Avenue Foch<br>
+Altkirch - Alsace<br>
+Tel: 03.68.06.80.03</p>
+
+<p>Le Domaine, espace privé de culte des arts souterrains et musiques amplifiées à Altkirch.</p>
 
 
 <div class="contact">
