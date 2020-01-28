@@ -16,8 +16,8 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                            <a class="nav-link d-lg-none d-inline justify-self-start" href="home" title="Page d'accueil">
-                            <img src="ressources/images/logo/Logo-White.svg" width="100" height="100"></a>
+                    <a class="nav-link d-lg-none" href="home" title="Page d'accueil">
+                    <img src="ressources/images/logo/Logo-White.svg" width="100" height="100"></a>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav d-flex justify-content-center align-items-center w-100">
                         <li class="nav-item <?php echo (isset($page) && $page=='home')?"active":""; ?>" >
